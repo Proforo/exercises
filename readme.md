@@ -14,7 +14,7 @@
 |  A-10  | Sections & structure           | |[✅](todo-list/a-10/readme.md)| | |
 |  B-01  | Setting up a project           | | | |🟪|
 |  B-02  | VSCode reference               | | | |🟪|
-|  B-03  | Images & paths                 | | |[✅](tasty-taco/a-03/readme.md)| |
+|  B-03  | Images & paths                 | | |[✅](tasty-taco/b-03/readme.md)| |
 |  B-04  | Box-model spacing              | |[✅](todo-list/b-04/readme.md)| | |
 |  B-05  | Tables                         |[✅](whack-a-mole/b-05/readme.md)| | | |
 |  B-06  | Background images              |[📝]()| | | |
