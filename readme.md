@@ -31,7 +31,7 @@ Items shown as ✅  (complete) in the table above are clickable.
 
 # Notes & Reminders
 
-- [] A-03 could also be the "callouts" and "prices" for the Tasty Taco. Revisit this after completing the whack-a-mole and decide if there's a better approach vs a quiz so early on
-- [] We need a blurb to introduce each of the three projects
-- [] Add `<meta name="description">` to all exercises
-- [] Fix folder for `.css` files and then path for images in css
+- [ ] A-03 could also be the "callouts" and "prices" for the Tasty Taco. Revisit this after completing the whack-a-mole and decide if there's a better approach vs a quiz so early on
+- [ ] We need a blurb to introduce each of the three projects
+- [ ] Add `<meta name="description">` to all exercises
+- [ ] Fix folder for `.css` files and then path for images in css
