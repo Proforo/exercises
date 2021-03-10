@@ -29,6 +29,12 @@
 
 Items shown as ✅  (complete) in the table above are clickable.
 
+
+# Quizzes
+
+Writing [possible quiz questions here](quizzes/quizzes.md) for the time being. Will re-focus on this after the code exercises are complete and needs are determined.
+
+
 # Notes & Reminders
 
 - [ ] A-03 could also be the "callouts" and "prices" for the Tasty Taco. Revisit this after completing the whack-a-mole and decide if there's a better approach vs a quiz so early on
