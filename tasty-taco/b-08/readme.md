@@ -1,24 +1,8 @@
-# Exercise B-03: Images & paths
+# Exercise B-08: Custom properties
 
 In this exercise, you will be developing a design system using variables, means to simplify the design process and maintain maximum scalability
 
 Complete the following steps in CSS to complete the exercise.
-
-```css
-html {
-	--col-a: rgb(255, 255, 255);
-	--col-a-on: rgb(20, 20, 20);
-	--col-b: rgb(203, 68, 33);
-	--col-b-on: rgb(255, 255, 255);
-	--col-c: rgba(255, 173, 50, 0.9);
-	--col-c-on: rgb(20, 20, 20);
-	--col-d: rgb(238, 238, 238);
-	--col-d-on: rgb(96, 96, 96);
-	--col-accent: rgba(0, 0, 0, 0.25);
-	--font-a: Helvetica, Arial, sans-serif;
-	--font-b: Georgia, 'Times New Roman', Times, serif;
-}
-```
 
 1. Define a rule as the very top of the `.css` document that will select the `<html>` element
 1. Within it, define two variables: `--font-a` and `--font-b`, assigning each the respective font sets defined earlier: `Helvetica, Arial, sans-serif` and `Georgia, 'Times New Roman', Times, serif`
