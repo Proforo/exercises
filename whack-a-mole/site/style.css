@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
+* { box-sizing: border-box; }
+html, body {
+	height: 100%;
+	margin: 0;
+}
+body {
+	font: 700 2rem 'Amatic SC', helvetica, arial, system-ui, sans-serif;
+}
+.info {
+	position: fixed;
+	top: 1;
+	width: 100%;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+	font-size: 2rem;
+	text-shadow: 0 0 0.25rem rgba(0,0,0,0.75);
+/* 	background-color: rgba(0,0,0,0.25); */
+}
+.grass {
+	display: flex;
+	height: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+/* 	background-color: #5c926a; */
+/* 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233f614e' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+	
+/* 		background-image: linear-gradient(#5c926a, #c8e6c9), url('https://images.unsplash.com/photo-1609675444090-160333f43257?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDI4MnxpVUlzblZ0akIwWXx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+	background-blend-mode: overlay; */
+	
+/* 	background-image: url('https://images.unsplash.com/photo-1603571029335-ac84c51a4025?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDEyOHxpVUlzblZ0akIwWXx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60'), linear-gradient(#5c926a, #c8e6c9);
+	background-blend-mode: luminosity; */
+/* 	https://media.istockphoto.com/vectors/vector-seamless-maze-pattern-organic-irregular-rounded-lines-abstract-vector-id1157965200?b=1&k=6&m=1157965200&s=612x612&w=0&h=dbCB4Ly4igLkgElcdyaLTeu5nxny2ftkpp3pWosS8hY= */
+	
+	background-image: url('https://assets.codepen.io/47071/grass.png'), radial-gradient(#c8e6c9, #5c926a);
+	background-blend-mode: multiply;
+	background-size: 20rem, 100%;
+	cursor: url('https://assets.codepen.io/47071/mallet.png') 30 30, crosshair;
+}
+.hole {
+	width: 20vmin;
+	height: 15vmin;
+	margin: 1vmin;
+	border-radius: 50%;
+	background-color: #311e11;
+	border-top: 3vmin solid #4c2f1e;
+}
+.mole {
+	background-color: #8d553c;
+	border: 0.5vmin solid #311e11;
+/* 	background-size: 100%; */
+	background-size: auto 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(https://www.pngrepo.com/download/232665/mole.png);
+/* 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='227.556' r='227.556' fill='%237c665d'/%3E%3Cg fill='%236e5550'%3E%3Cpath d='M155.937 284.85c-22.538-15.095-76.876-45.066-124.647-21.39 11.77 74.236 59.431 136.517 124.647 168.51V284.85zM356.064 284.849v147.12c65.215-31.993 112.876-94.273 124.646-168.509-47.771-23.675-102.108 6.294-124.646 21.389z'/%3E%3C/g%3E%3Cpath d='M494.764 401.064c-36.423-42.498-89.268-58.822-116.97-64.729a122.965 122.965 0 00-.989-11.386c21.368.146 73.204 2.783 107.626 23.361a8.084 8.084 0 004.159 1.151 8.13 8.13 0 006.984-3.96 8.123 8.123 0 00-2.81-11.143c-40.2-24.044-98.947-25.862-119.295-25.699-14.282-51.458-61.461-89.23-117.468-89.23s-103.186 37.772-117.469 89.23c-20.348-.164-79.095 1.655-119.295 25.699a8.124 8.124 0 00-2.81 11.143 8.128 8.128 0 0011.143 2.809c34.422-20.579 86.259-23.215 107.626-23.361a122.62 122.62 0 00-.989 11.386c-27.702 5.907-80.547 22.231-116.97 64.729a8.106 8.106 0 00.881 11.452 8.073 8.073 0 005.286 1.961c2.286 0 4.563-.96 6.166-2.841 31.719-36.995 78.613-52.514 104.924-58.61.292 4.472.746 9.054 1.363 13.716-24.153 11.038-61.553 33.79-86.914 76.06a8.127 8.127 0 1013.936 8.365c21.675-36.122 53.735-56.862 75.843-67.657C151.523 444.825 190.862 512 256 512s104.477-67.175 117.278-128.491c22.109 10.795 54.169 31.535 75.843 67.657a8.118 8.118 0 006.976 3.945 8.127 8.127 0 006.96-12.31c-25.361-42.27-62.761-65.022-86.914-76.06a206.44 206.44 0 001.363-13.716c26.311 6.096 73.205 21.615 104.924 58.61a8.077 8.077 0 006.166 2.841 8.075 8.075 0 005.286-1.961 8.103 8.103 0 00.882-11.451z' fill='%23957863'/%3E%3Cellipse cx='256' cy='402.286' rx='65.016' ry='93.46' fill='%23c09682'/%3E%3Cpath d='M255.998 425.156c20.317 0 41.989-24.031 56.889 0s-17.26 70.589-56.889 70.589-71.788-46.557-56.888-70.589c14.899-24.031 36.571 0 56.888 0z' fill='%23ebb4a0'/%3E%3Cg fill='%23464655'%3E%3Ccircle cx='85.334' cy='260.064' r='16.254'/%3E%3Ccircle cx='426.667' cy='260.064' r='16.254'/%3E%3C/g%3E%3C/svg%3E"); */
+}
+.whacked {
+	background-color: lime;
+	border: 0.5vmin solid yellowgreen;
+	/* need another mole image? Or just replace `background-image` */
+}
+
+.modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+}
+.hole:active {
+	cursor: url('https://assets.codepen.io/47071/whack.png') 30 30, crosshair;
+}
+
+.leaderboard {
+	position: absolute;
+/* 	top: 10%;
+	left: 10%; */
+	width: 80%;
+	/* width: clamp(300px, 80%, 600px); */
+	/* height: 80%; */
+	border-radius: 1rem;
+	box-shadow: 0 0 2rem rgba(0,0,0);
+	border-collapse: collapse;
+	font-size: 1.5rem;
+	line-height: 2;
+	border-radius: 1rem;
+	overflow: hidden;
+	text-align: center;
+}
+.categories {
+	background-color: #5c926a;
+	color: #c8e6c9;
+	border-radius: 1rem 1rem 0 0;
+}
+.scores {
+	display: block;
+	/* height: 100%;
+	height: calc(100% - 2.125rem); */
+	width: 100%;
+	overflow: scroll;
+/* 	max-height: 200px; */
+	
+	background-color: #f5f5f5;
+	/* background-image: url(https://www.pngrepo.com/download/232665/mole.png); */
+	background-size: 5em;
+	background-blend-mode: soft-light;
+	background-repeat: space;
+
+	/* border-radius: 1rem; */
+}
+.scores tr, .categories {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+.scores tr:nth-child(even) {
+	background-color: rgba(0,0,0,0.2);
+}
+/* First do this with  */
+.leaderboard tr :first-child {
+	width: 40%;
+	padding-left: 1rem;
+	text-align: left;
+}
+.leaderboard tr :last-child {
+	padding-right: 1rem;
+	text-align: right;
+}
+.leaderboard caption {
+	color: #fff;
+	font-size: 3rem;
+	line-height: 1;
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+}
+.btn {
+	display: none; /*temp*/
+	font: inherit;
+	border: none;
+	padding: none;
+}
+.close {
+	position: absolute;
+	top: 10%;
+	right: 10%;
+	z-index: 1;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background-color: tomato;
+	margin-top: -0.5rem;
+	margin-right: -0.5rem;
+	font-size: 1rem;
+	box-shadow: 0 0 1em rgba(0,0,0,0.4);
+}
+
+.start {
+	/* put a mole on here too? Maybe design this a bit? */
+	
+}
+
+
+
+
+
+/* AFTER!! */
+.hide {
+	display: none;
+}
