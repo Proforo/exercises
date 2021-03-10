@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Todo-list</title>
+		<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+		<!-- <link rel="stylesheet" href="css/reset.css"> -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+
+
+		<!-- SCHEDULE
+		Make sure labels match the control with arias
+		-->
+
+
+
+
+		<!-- <header class="top"> -->
+
+		
+			<input type="checkbox" name="mode" id="mode" value="dark" class="mode">
+		
+			
+		<!-- </header> -->
+
+		<!-- Grocery? with neutrional sublist -->
+		<!-- Toggle light/dark modes including variables -->
+
+
+		<!-- <h1>Task List</h1> -->
+
+		<!-- Need better tasks -->
+		<div class="layout">
+
+			<header>
+				<h1>Task List</h1>
+				<label for="mode" class="switch">
+					<div class="flip"></div>
+				</label>
+			</header>
+			
+			<ol class="all-tasks">
+<!-- 				<li class="todo cat-work">
+					<input type="checkbox" id="task1" class="status-check">
+					<label for="task1" class="status" aria-label="Complete">✓</label>
+					<details class="details">
+						<summary class="task">Complete homework <time class="due urgent" datetime="">23 minutes</time></summary>
+						<section class="subpoints">
+							<h2>Sub-tasks</h2>
+							<ul>
+								<li>Get stuff done</li>
+								<li>Write a plan</li>
+								<li>Do more things</li>
+							</ul>
+							<button class="btn addsub">+ Add a sub-task</button>
+						</section>
+						<section class="notes">
+							<h2>Notes</h2>
+							<p>Lorem, ipsum dolor sit amet consectetur...</p>
+						</section>
+						<footer>
+							<button class="btn save">Save changes</button>
+						</footer>
+					</details>
+				</li>
+ -->
+
+
+				<li class="todo cat-work">
+					<input type="checkbox" id="task1" class="status-check">
+					<label for="task1" class="status" aria-label="Complete">✓</label>
+					<details class="details">
+						<summary class="task">Complete homework <time class="due urgent" datetime="">23 minutes</time></summary>
+						<!-- <div class="deets"> -->
+							<section>
+								<h2>Sub-tasks</h2>
+								<ul class="subpoints">
+									<li>Get stuff done</li>
+									<li>Write a plan</li>
+									<li>Do more things</li>
+								</ul>
+								<!-- <button class="btn addsub">+ Add a sub-task</button> -->
+							</section>
+							<section>
+								<h2>Notes</h2>
+								<p>Lorem, ipsum dolor sit amet consectetur...</p>
+							</section>
+						<!-- </div> -->
+						<footer>
+							<!-- <button class="btn save">Save changes</button> -->
+						</footer>
+					</details>
+				</li>
+
+				<li class="todo cat-work">
+					<input type="checkbox" id="task1" class="status-check">
+					<label for="task1" class="status" aria-label="Complete">✓</label>
+					<details class="details">
+						<summary class="task">Complete homework <time timedate="1970-01-01 00:00:0.000" class="due">Jan 1st @ 12:00a</time></summary>
+						<!-- <div class="deets"> -->
+							<section>
+								<h2>Sub-tasks</h2>
+								<ul class="subpoints">
+									<li>Get stuff done</li>
+									<li>Write a plan</li>
+									<li>Do more things</li>
+								</ul>
+								<!-- <button class="btn addsub">+ Add a sub-task</button> -->
+							</section>
+							<section>
+								<h2>Notes</h2>
+								<p>Lorem, ipsum dolor sit amet consectetur...</p>
+							</section>
+						<!-- </div> -->
+						<footer>
+							<!-- <button class="btn save">Save changes</button> -->
+						</footer>
+					</details>
+				</li>
+
+				
+				<!-- <li>
+					<details class="task cat-personal">
+						<summary class="todo">Mow the lawn <time class="due" datetime="">March 20, 2021</time></summary>
+						<section class="subpoints">
+							<h2>Sub-tasks</h2>
+							<ul>
+								<li>Recharge the battery</li>
+							</ul>
+							<button class="btn addsub">+ Add a sub-task</button>
+						</section>
+						<section class="notes">
+							<h2>Notes</h2>
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe deleniti similique doloremque, doloribus exercitationem odit numquam iure mollitia vitae possimus veniam! Molestiae, numquam tenetur commodi amet perspiciatis eos necessitatibus suscipit.</p>
+						</section>
+						<footer>
+							<button class="btn save" disabled>Save changes</button>
+						</footer>
+					</details>
+				</li>
+
+				<li>
+					<details class="task cat-personal">
+						<summary class="todo">Pickup paint for the kitchen <time class="due" datetime="">July 1, 2021</time></summary>
+						<section class="subpoints">
+							<h2>Sub-tasks</h2>
+							<ul>
+								<li>Get whatever done</li>
+								<li>Write a plan</li>
+								<li>Do more things</li>
+							</ul>
+							<button class="btn addsub">+ Add a sub-task</button>
+						</section>
+						<section class="notes">
+							<h2>Notes</h2>
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe deleniti similique doloremque, doloribus exercitationem odit numquam iure mollitia vitae possimus veniam! Molestiae, numquam tenetur commodi amet perspiciatis eos necessitatibus suscipit.</p>
+						</section>
+						<footer>
+							<button class="btn save" disabled>Save changes</button>
+						</footer>
+					</details>
+				</li>
+
+				<li>
+					<details class="task complete">
+						<summary class="todo">Write a to-do list <time class="due urgent" datetime="">June 8, 2021</time></summary>
+						<section class="subpoints">
+							<h2>Sub-tasks</h2>
+							<ul>
+								<li>Get whatever done</li>
+								<li>Write a plan</li>
+								<li>Do more things</li>
+							</ul>
+							<button class="btn addsub">+ Add a sub-task</button>
+						</section>
+						<section class="notes">
+							<h2>Notes</h2>
+						</section>
+						<footer>
+							<button class="btn save" disabled>Save changes</button>
+						</footer>
+					</details>
+				</li>
+
+				<li>
+					<details class="task complete cat-important">
+						<summary class="todo">Get this list wrapped-up <time class="due urgent" datetime="">June 8, 2021</time></summary>
+						<section class="subpoints">
+							<h2>Sub-tasks</h2>
+							<ul>
+								<li>Get whatever done</li>
+								<li>Write a plan</li>
+								<li>Do more things</li>
+							</ul>
+							<button class="btn addsub">+ Add a sub-task</button>
+						</section>
+						<section class="notes">
+							<h2>Notes</h2>
+						</section>
+						<footer>
+							<button class="btn save" disabled>Save changes</button>
+						</footer>
+					</details>
+				</li> -->
+
+			
+
+			</ol>
+
+			<!-- <button class="new">+</button> -->
+		</div>
+
+		<script src="js/index.js"></script>
+	</body>
+</html>

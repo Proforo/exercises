@@ -1,0 +1,50 @@
+body {
+	background-color: rgb(255, 255, 255);
+	color: rgb(20, 20, 20);
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+}
+a {
+	background-color: rgb(203, 68, 33);
+	color: rgb(255, 255, 255);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+.nav-sublist a {
+	font-weight: 400;
+}
+.active {
+	background-color: rgb(255, 173, 50);
+	color: rgb(20, 20, 20);
+}
+.primary-slogan {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 3rem;
+	font-weight: 700;
+}
+.secondary-slogan {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.business-name {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: 2.5rem;
+}
+.category-name {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: 2.5rem;
+}
+.callout {
+	background-color: rgb(255, 173, 50);
+	color: rgb(20, 20, 20);
+	font-style: italic;
+	font-weight: 700;
+}
+.item-name {
+	font-family: 1rem;
+}
+.item-price {
+	color: rgb(203, 68, 33);
+	font-style: italic;
+}
