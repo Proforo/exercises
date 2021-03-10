@@ -14,12 +14,12 @@
 |  A-10  | Sections & structure           | |[✅](todo-list/a-10/readme.md)| | |
 |  B-01  | Setting up a project           | | | |🟪|
 |  B-02  | VSCode reference               | | | |🟪|
-|  B-03  | Images & paths                 | | |[✅]()| |
+|  B-03  | Images & paths                 | | |[✅](tasty-taco/a-03/readme.md)| |
 |  B-04  | Box-model spacing              | |[✅](todo-list/b-04/readme.md)| | |
-|  B-05  | Tables                         |[✅]()| | | |
+|  B-05  | Tables                         |[✅](whack-a-mole/b-05/readme.md)| | | |
 |  B-06  | Background images              |[📝]()| | | |
 |  B-07  | Typesetting                    | |[✅](todo-list/b-07/readme.md)| | |
-|  B-08  | Custom properties              | | |[✅]()| |
+|  B-08  | Custom properties              | | |[✅](tasty-taco/b-08/readme.md)| |
 
 ### Legend
 
@@ -34,3 +34,4 @@ Items shown as ✅  (complete) in the table above are clickable.
 - [] A-03 could also be the "callouts" and "prices" for the Tasty Taco. Revisit this after completing the whack-a-mole and decide if there's a better approach vs a quiz so early on
 - [] We need a blurb to introduce each of the three projects
 - [] Add `<meta name="description">` to all exercises
+- [] Fix folder for `.css` files and then path for images in css

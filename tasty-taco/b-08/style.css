@@ -1,0 +1,150 @@
+body {
+	margin: 0;
+	background-color: rgb(255, 255, 255);
+	color: rgb(20, 20, 20);
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.3;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+/* Header and menu */
+.content-header {
+	background-color: rgb(203, 68, 33);
+	color: rgb(255, 255, 255);
+}
+.navigation {
+	padding: 1rem 2rem;
+}
+.logo {
+	margin: 2rem 0;
+}
+.nav-list, .nav-sublist {
+	list-style-type: none;
+	padding-left: 0;
+}
+.nav-list {
+	border-top: 1px solid rgba(0,0,0,0.25);
+	margin: 2rem 0;
+}
+
+/* Anchors */
+.nav-list a {
+	display: block;
+	color: rgb(255, 255, 255);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 1rem 0;
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+.nav-sublist a {
+	font-weight: 400;
+}
+.nav-list .active {
+	text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+	background-image: url('img/header.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 4rem 0 17rem 0;
+	text-shadow: 0 0 1rem rgba(0,0,0,0.25);
+}
+.slogans {
+	padding: 0 2rem;
+}
+.primary-slogan {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 3rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+	margin: 1rem 0;
+}
+.secondary-slogan {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: rgb(255, 255, 255);
+	margin: 1rem 0;
+}
+
+
+/* Menu header */
+.food-menu {
+	padding: 0 1rem;
+	margin-top: -12rem;
+}
+.menu-intro {
+	background-color: rgb(255, 173, 50);
+	color: rgb(20, 20, 20);
+	padding: 5rem 1rem;
+	text-align: center;
+	border-bottom: 0.5rem solid rgba(0,0,0,0.25);
+	font-size: 1.5rem;
+}
+.business-name {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: 2.5rem;
+	text-transform: uppercase;
+}
+
+/* Menu categories */
+.menu-category {
+	padding: 3rem 1rem;
+}
+.category-header {
+	text-align: center;
+	margin: 2rem 0;
+}
+.category-name {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: 2.5rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 1rem 0;
+}
+.callout {
+	display: inline-block;
+	background-color: rgb(255, 173, 50);
+	color: rgb(20, 20, 20);
+	font-style: italic;
+	font-weight: 700;
+	text-align: center;
+	border-radius: 2rem;
+	padding: 0.25rem 1rem;
+}
+
+
+/* Menu items */
+.menu-item {
+	margin: 5rem 0;
+}
+.item-description {
+	border-top: 1px solid rgb(20, 20, 20);
+	border-bottom: 1px solid rgb(20, 20, 20);
+	text-align: center;
+	margin: 2rem 1rem;
+	padding: 2rem;
+}
+.item-name {
+	font-size: 1rem;
+	margin: 1rem 0;
+}
+.item-price {
+	color: rgb(203, 68, 33);
+	font-style: italic;
+}
+.content-footer {
+	background-color: rgb(238, 238, 238);
+	color: rgb(96, 96, 96);
+	text-align: center;
+	padding: 5rem 1rem;
+}
