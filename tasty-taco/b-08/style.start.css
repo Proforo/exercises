@@ -91,8 +91,8 @@ img {
 	font-size: 1.5rem;
 }
 .business-name {
+	font-size: 2.5rem;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-family: 2.5rem;
 	text-transform: uppercase;
 }
 
@@ -105,8 +105,8 @@ img {
 	margin: 2rem 0;
 }
 .category-name {
+	font-size: 2.5rem;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-family: 2.5rem;
 	text-transform: uppercase;
 	text-align: center;
 	margin: 1rem 0;

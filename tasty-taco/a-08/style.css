@@ -28,12 +28,12 @@ a {
 	font-weight: 700;
 }
 .business-name {
+	font-size: 2.5rem;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-family: 2.5rem;
 }
 .category-name {
+	font-size: 2.5rem;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-family: 2.5rem;
 }
 .callout {
 	background-color: rgb(255, 173, 50);
@@ -42,7 +42,7 @@ a {
 	font-weight: 700;
 }
 .item-name {
-	font-family: 1rem;
+	font-size: 1rem;
 }
 .item-price {
 	color: rgb(203, 68, 33);

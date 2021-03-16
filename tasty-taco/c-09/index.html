@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tasty Taco</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+		<header class="content-header">
+			<nav class="navigation container inline-nav">
+				<a href="#" class="logo"><img src="img/tasty-logo.svg" alt="Tasty Taco logo"></a>
+				<ul class="nav-list inline-nav">
+					<li><a href="#">Home</a></li>
+					<li class="inline-nav">
+						<a href="#" class="active">Menu</a>
+						<ul class="nav-sublist inline-nav">
+							<li><a href="#starters">Starters</a></li>
+							<li><a href="#tacos">Tacos</a></li>
+							<li><a href="#dessert">Dessert</a></li>
+						</ul>
+					</li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="content-main">
+			<header class="hero">
+				<div class="slogans container">
+					<div class="primary-slogan">Eat Tacos.<br>Be Happy.</div>
+					<div class="secondary-slogan">Order the best tacos around.<br>Make your lunch.</div>
+				</div>
+			</header>
+			<article class="food-menu container">
+				<header class="menu-intro">
+					<h1 class="business-name">Tasty Tacos</h1>
+					<p>Why mess with perfection? Tasty Taco delivers a simple menu of classic flavors. By staying true to ingredients and techniques refined over generations, we work meticulously on presenting authentic and delicious food. From rigorous sourcing to conscientious service, we believe you’ll get incredible food every time you dine with us.</p>
+				</header>
+				<section id="starters" class="menu-category">
+					<header class="category-header">
+						<h2 class="category-name">Starters</h2>
+						<strong class="callout">Add $5 to any starter to upgrade to a sharable portion</strong>
+					</header>
+					<div class="item-group">
+						<article class="menu-item">
+							<img 
+								srcset="img/starters-guac-sm.jpg 560w,
+												img/starters-guac-md.jpg 880w,
+												img/starters-guac-lg.jpg 1216w"
+								src="img/starters-guac-sm.jpg" alt="Guacamole and Chips">
+							<div class="item-description">
+								<h3 class="item-name">Guacamole and Chips</h3>
+								<data value="9.00" class="item-price"><abbr title="Dollars">$</abbr>9</data>
+								<p>House-made GF nacho chips with a hearty side of mashed avocado</p>
+							</div>
+						</article>
+						<article class="menu-item">
+							<img 
+								srcset="img/starters-nachos-sm.jpg 560w,
+												img/starters-nachos-md.jpg 880w,
+												img/starters-nachos-lg.jpg 1216w"
+								src="img/starters-nachos-lg.jpg" alt="Nachos">
+							<div class="item-description">
+								<h3 class="item-name">Nachos</h3>
+								<data value="14.00" class="item-price"><abbr title="Dollars">$</abbr>14</data>
+								<p>House-made GF nacho chips topped with queso fresco, corn salsa, and fresh jalapeños and onions, with a side of sour cream and guacamole</p>
+							</div>
+						</article>
+						<article class="menu-item">
+							<img 
+								srcset="img/starters-salad-sm.jpg 560w,
+												img/starters-salad-md.jpg 880w,
+												img/starters-salad-lg.jpg 1216w"
+								src="img/starters-salad-lg.jpg" alt="Avocado & Mango Salad">
+							<div class="item-description">
+								<h3 class="item-name">Avocado & Mango Salad</h3>
+								<data value="12.00" class="item-price"><abbr title="Dollars">$</abbr>12</data>
+								<p>Sliced avocado and mango tossed with pepitas and a cilantro-lime dressing</p>
+							</div>
+						</article>
+					</div>
+				</section>
+				<section id="tacos" class="menu-category">
+					<header class="category-header">
+						<h2 class="category-name">Tacos</h2>
+						<strong class="callout">Order three for <data value="7.00"><abbr title="Dollars">$</abbr>7</data> or <data value="3.00"><abbr title="Dollars">$</abbr>3</data> each</strong>
+					</header>
+					<div class="item-group">
+						<article class="menu-item">
+							<img 
+								srcset="img/tacos-chorizo-sm.jpg 560w,
+												img/tacos-chorizo-md.jpg 880w,
+												img/tacos-chorizo-lg.jpg 1216w"
+								src="img/tacos-chorizo-lg.jpg" alt="Chorizo tacos">
+							<div class="item-description">
+								<h3 class="item-name">Chorizo</h3>
+								<p>House-made Mexican chorizo with queso fresco and cilantro</p>
+							</div>
+						</article>
+						<article class="menu-item">
+							<img 
+								srcset="img/tacos-chicken-sm.jpg 560w,
+												img/tacos-chicken-md.jpg 880w,
+												img/tacos-chicken-lg.jpg 1216w"
+								src="img/tacos-chicken-lg.jpg" alt="Chicken tacos">
+							<div class="item-description">
+								<h3 class="item-name">Chicken</h3>
+								<p>Tinga-style braised chicken with pickled onion, sour cream, and guacamole</p>
+							</div>
+						</article>
+						<article class="menu-item">
+							<img 
+								srcset="img/tacos-bajafish-sm.jpg 560w,
+												img/tacos-bajafish-md.jpg 880w,
+												img/tacos-bajafish-lg.jpg 1216w"
+								src="img/tacos-bajafish-lg.jpg" alt="Baja fish tacos">
+							<div class="item-description">
+								<h3 class="item-name">Baja Fish</h3>
+								<p>Beer-battered white fish with sofrito sauce and queso fresco</p>
+							</div>
+						</article>
+					</div>
+				</section>
+				<section id="dessert" class="menu-category">
+					<header class="category-header">
+						<h2 class="category-name">Dessert</h2>
+						<strong class="callout">Ask about our daily special</strong>
+					</header>
+					<div class="item-group">
+						<article class="menu-item">
+							<img 
+								srcset="img/dessert-churros-sm.jpg 560w,
+												img/dessert-churros-md.jpg 880w,
+												img/dessert-churros-lg.jpg 1216w"
+								src="img/dessert-churros-lg.jpg" alt="Churros - Caramel or Chocolate">
+							<div class="item-description">
+								<h3 class="item-name">Churros - Caramel or Chocolate</h3>
+								<data value="9.00" class="item-price"><abbr title="Dollars">$</abbr>9</data>
+								<p>Length of ridged fried pastry piped with your choice of caramel or chocolate filling, and dusted with icing sugar. <div>(Add vanilla ice cream for $3)</div></p>
+							</div>
+						</article>
+					</div>
+				</section>
+			</article>
+		</main>
+		<footer class="content-footer">
+			<a href="#" class="logo"><img src="img/tasty-logo-black.svg" alt="Tasty Taco logo"></a>
+			<div>&copy;2021 - Tasty Taco Restaurant</div>
+		</footer>
+
+	</body>
+</html>

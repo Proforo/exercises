@@ -1,6 +1,6 @@
 # Exercises
 
-| Lesson | Name                           | Whack-a-mole | Task-list | Tasty Taco | Quiz |
+| Lesson | Name                           | Whack-a-mole | Task-list | Tasty Taco | Quiz/Other |
 |:------:|--------------------------------|:------------:|:---------:|:----------:|:----:|
 |  A-01  | Getting started with the web   | | | |🟪|
 |  A-02  | Document outline               | | |[✅](tasty-taco/a-02/readme.md)| |
@@ -20,6 +20,18 @@
 |  B-06  | Background images              |[📝]()| | | |
 |  B-07  | Typesetting                    | |[✅](todo-list/b-07/readme.md)| | |
 |  B-08  | Custom properties              | | |[✅](tasty-taco/b-08/readme.md)| |
+|  C-01  | Developer tools                | | | |🟪|
+|  C-02  | Cascading & selector           | | | | |
+|  C-03  | Media queries                  | | | |[✅](https://codepen.io/1hrcoach/pen/gOLOzKE)|
+|  C-04  | Box-model layout               | | |[✅](tasty-taco/c-04/readme.md)| |
+|  C-05  | Responsive images              | | |[✅](tasty-taco/c-05/readme.md)| |
+|  C-06  | Pseudo classes                 | | | | |
+|  C-07  | Animation                      | | | | |
+|  C-08  | Element display                | | | | |
+|  C-09  | Flex container                 | | |[✅](tasty-taco/c-09/readme.md)| |
+|  C-10  | Position                       | | | | |
+
+
 
 ### Legend
 
@@ -41,3 +53,5 @@ Writing [possible quiz questions here](quizzes/quizzes.md) for the time being. W
 - [ ] We need a blurb to introduce each of the three projects
 - [ ] Add `<meta name="description">` to all exercises
 - [ ] Fix folder for `.css` files and then path for images in css
+- [ ] Tasty taco image assets need to be replaced/revisited (css and html) for continuity
+- [ ] Check all `planning.md` per-project files for remaining excluded notes
