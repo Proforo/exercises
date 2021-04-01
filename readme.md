@@ -27,7 +27,7 @@
 |  C-05  | Responsive images                  | | |[✅](tasty-taco/c-05/readme.md)| |
 |  C-06  | Pseudo classes                     |[✅](whack-a-mole/c-06/readme.md)| | | |
 |  C-07  | Animation                          | | | |🟪🧠|
-|  C-08  | Element display                    | | | |🟪🧠|
+|  C-08  | Element display                    | | | |🟪|
 |  C-09  | Flex container                     | | |[✅](tasty-taco/c-09/readme.md)| |
 |  C-10  | Position                           |[✅](whack-a-mole/c-10/readme.md)| | | |
 |  D-01  | Introduction to JavaScript         | | | |🟪|
