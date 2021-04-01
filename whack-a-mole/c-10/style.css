@@ -197,7 +197,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	cursor: auto;
-	display: none;
 }
 .close {
 	background-color: tomato;
