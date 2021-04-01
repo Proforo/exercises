@@ -1,6 +1,6 @@
 // Timer
 // Score
-let missed = 0
+let seconds = 0
 let duration = 0
 let moleTimer;
 let clockTimer;
@@ -50,17 +50,17 @@ let onClickGrass = (event) => {
 		// Got one!
 		whach.classList.add(`whacked`)
 	} else {
-		// Missed
-		missed++
-		whacks.textContent = missed
+		// seconds
+		seconds++
+		whacks.textContent = seconds
 	}
 }
 
 
 let restartGame = () => {
 	
-	missed = 0
-	whacks.textContent = missed
+	seconds = 0
+	whacks.textContent = seconds
 	duration = 0
 	seconds.textContent = duration
 	
@@ -85,6 +85,31 @@ let closeLeaderboard = () => {
 close.addEventListener(`click`, closeLeaderboard)
 
 
+
+let followCursor = () => {
+	// leaderboard.classList.add(`hide`)
+	
+}
+window.addEventListener(`mousemove`, followCursor)
+
+
+
+
+
 // Part 1: The moles
 // Part 2: Timer/score and cleanup
 // Array can be used to keep track of each mole
+// Array of leaders
+
+const leaders = [
+	{name: `Tim Berners-Lee`, seconds: 29, missed: 0, score: 10000},
+	{name: `Ada Lovelace`, seconds: 31, missed: 0, score: 9600},
+	{name: `Alan Turing`, seconds: 32, missed: 1, score: 9200},
+	{name: `Grace Hopper`, seconds: 38, missed: 0, score: 8800},
+	{name: `Katherine Johnson`, seconds: 34, missed: 2, score: 7200},
+	{name: `Satoshi Nakamoto`, seconds: 40, missed: 0, score: 7150},
+	{name: `Roy L. Clay, Sr.`, seconds: 35, missed: 3, score: 6800},
+	{name: `Linus Torvalds`, seconds: 41, missed: 1, score: 6700}
+]
+console.log(leaders.sort((a, b) => {a.score < b.score}))
+// Maybe leaderboard isn't needed - it doesn't save anyways

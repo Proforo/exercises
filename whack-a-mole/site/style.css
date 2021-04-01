@@ -8,6 +8,13 @@ html, body {
 }
 body {
 	font: 700 2rem 'Amatic SC', helvetica, arial, system-ui, sans-serif;
+
+	background-image: url('img/scribble_989898.jpg'), radial-gradient(#49642e, #395221);
+	background-image: url('img/scribble_989898.jpg'), radial-gradient(#779956, #4a682e);
+	background-blend-mode: multiply;
+	background-size: 8rem, 100%;
+	background-position: center;
+	cursor: url('img/slappy-up-64.png') 32 32, crosshair;
 }
 .info {
 	position: fixed;
@@ -21,7 +28,7 @@ body {
 	text-shadow: 0 0 0.25rem rgba(0,0,0,0.75);
 /* 	background-color: rgba(0,0,0,0.25); */
 }
-.grass {
+.mole-holes {
 	display: flex;
 	height: 100%;
 	flex-wrap: wrap;
@@ -37,15 +44,23 @@ body {
 	background-blend-mode: luminosity; */
 /* 	https://media.istockphoto.com/vectors/vector-seamless-maze-pattern-organic-irregular-rounded-lines-abstract-vector-id1157965200?b=1&k=6&m=1157965200&s=612x612&w=0&h=dbCB4Ly4igLkgElcdyaLTeu5nxny2ftkpp3pWosS8hY= */
 	
-	background-image: url('img/scribble_989898.jpg'), radial-gradient(#49642e, #395221);
-	background-image: url('img/scribble_989898.jpg'), radial-gradient(#779956, #4a682e);
-	background-blend-mode: multiply;
-	/* background-blend-mode:soft-light; */
-	background-size: 20rem, 100%;
-	background-size: 8rem, 100%;
-	background-position: center;
-	cursor: url('https://assets.codepen.io/47071/mallet.png') 30 30, crosshair;
+
+	
+
+	width: 42rem;
+	margin: auto;
 }
+
+/* 
+.game {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	width: 88vmin;
+}
+*/
+
 .hole {
 	width: 20vmin;
 	height: 15vmin;
@@ -53,6 +68,12 @@ body {
 	border-radius: 50%;
 	background-color: #311e11;
 	border-top: 3vmin solid #4c2f1e;
+
+	width: 10rem;
+	height: 7.5rem;
+	margin: 0.25rem;
+	border-top: 1rem solid #4c2f1e;
+
 }
 .mole {
 	background-color: #311e11;
@@ -83,17 +104,23 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.5);
+	cursor: auto;
+}
+.hole:hover {
+	cursor: url('img/slappy-up-over-64.png') 32 32, crosshair;
 }
 .hole:active {
-	cursor: url('https://assets.codepen.io/47071/whack.png') 30 30, crosshair;
+	cursor: url('img/slappy-down-64.png') 32 32, crosshair;
 }
+
 
 .leaderboard {
 	position: absolute;
-/* 	top: 10%;
-	left: 10%; */
+	/* top: 10%; */
+	left: 10%;
 	width: 80%;
+	/* max-width: ????; */
 	/* width: clamp(300px, 80%, 600px); */
 	/* height: 80%; */
 	border-radius: 1rem;
@@ -102,8 +129,9 @@ body {
 	font-size: 1.5rem;
 	line-height: 2;
 	border-radius: 1rem;
-	overflow: hidden;
+	/* overflow: hidden; */
 	text-align: center;
+	/* display: none; */
 }
 .categories {
 	background-color: #5c926a;
@@ -116,13 +144,15 @@ body {
 	height: calc(100% - 2.125rem); */
 	width: 100%;
 	overflow: scroll;
+	border-radius: 0 0 1rem 1rem;
 /* 	max-height: 200px; */
 	
-	background-color: #f5f5f5;
+	background-color: #eeeeee;
 	/* background-image: url(https://www.pngrepo.com/download/232665/mole.png); */
-	background-size: 5em;
+	background-image: url('img/mole.png');
+	background-size: 3em;
 	background-blend-mode: soft-light;
-	background-repeat: space;
+	/* background-repeat: round; */
 
 	/* border-radius: 1rem; */
 }
@@ -144,13 +174,15 @@ body {
 	padding-right: 1rem;
 	text-align: right;
 }
-.leaderboard caption {
+.leaders {
 	color: #fff;
 	font-size: 3rem;
 	line-height: 1;
 	/* position: absolute; */
-	top: 0;
-	left: 0;
+	/* top: -3rem; */
+	/* z-index: 10; */
+	/* top: 0; */
+	/* left: 0; */
 }
 .btn {
 	
@@ -160,18 +192,20 @@ body {
 }
 .close {
 	position: absolute;
-	top: 10%;
-	right: 10%;
+	top: 2.5rem;
+	right: -0.5rem;
+	/* right: 1rem; */
 	z-index: 1;
 	width: 1.5rem;
 	height: 1.5rem;
 	border-radius: 50%;
 	background-color: tomato;
-	margin-top: -0.5rem;
-	margin-right: -0.5rem;
+	/* margin-top: -0.5rem; */
+	/* margin-right: -0.5rem; */
 	font-size: 1rem;
 	box-shadow: 0 0 1em rgba(0,0,0,0.4);
 }
+/* Or maybe "close" beside the "Leaderboard"? */
 
 .start {
 	/* put a mole on here too? Maybe design this a bit? */
@@ -187,7 +221,7 @@ body {
 	display: none;
 }
 
-
+/* 
 .hammer {
 	background-image: url('https://assets.codepen.io/47071/whack.png');
 	width: 128px;
@@ -195,4 +229,4 @@ body {
 	position: fixed;
 	top: 58%;
 	left: 30%;
-}
+} */
