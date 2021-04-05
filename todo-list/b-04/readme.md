@@ -1,7 +1,7 @@
 
 
 1. As with most layouts, begin by removing the default `margin` applied to the `body`, setting the value to `0`
-2. As the `.all-items` list will not be treated as a traditional list with markers, remove its `padding-left` by setting it to a value of `0`
+2. As the `.all-tasks` list will not be treated as a traditional list with markers, remove its `padding-left` by setting it to a value of `0`
 3. The list is now touching the outer edge of the browser viewport. There are a number of ways to space this away from the edge, and future changes may require a chance in application method, but adding a `margin-left` and `margin-right` of `1rem` to the sides of the `.all-tasks` list, would get the job done easily for the time being
 4. Expand on the existing `.todo` rule, by creating some spacing within (`padding`) and around (`margin`)
    1. Use the `padding` single-declaration shortcut to set the `top` and `bottom` to a value of `0`, while the `left` and `right` are both set to `1rem`
