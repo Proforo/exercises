@@ -21,4 +21,4 @@ Linus Torvalds / 41 / 1 / 6700
 1. Create a `<table>` element within the `<body>` of the HTML document
 1. Add a `<thead>`, which will consist of a single **row**, and four (4) **headings**: Name, Seconds, Missed, Score
 1. Add a `<tbody>`, which within, will have eight (8) rows of example data. Each of the rows will have four (4) **data** items to align below the appropriate headings. Use the sample data provided above
-1. Add a `<caption>` to the table, wrapping around the text "Leaderboard"
+1. Add a `<caption>` to the bottom of the table, wrapping around the text "Leaderboard"
