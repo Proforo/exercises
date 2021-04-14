@@ -39,8 +39,8 @@
 |  D-07  | Document Elements                  |[✅](whack-a-mole/d-07/readme.md)| | | |
 |  D-08  | Event Listeners                    |[✅](whack-a-mole/d-08/readme.md)| | | |
 |  D-09  | Build-in Objects & Documentation   |[✅](whack-a-mole/d-09/readme.md)| | | |
-|  E-01  | Creating Elements                  |[✅](whack-a-mole/e-01/readme.md)|🟪| | |
-|  E-02  | Arrays                             |[✅](whack-a-mole/e-02/readme.md)|🟪| | |
+|  E-01  | Creating Elements                  |[✅](whack-a-mole/e-01/readme.md)| | | |
+|  E-02  | Arrays                             |[✅](whack-a-mole/e-02/readme.md)| | | |
 |  E-03  | Booleans and Conditions            |[✅](whack-a-mole/e-03/readme.md)| | | |
 |  E-04  | Event Delegation                   |[✅](whack-a-mole/e-04/readme.md)| | | |
 |  E-05  | Javascript Object Notation (JSON)  |[✅](whack-a-mole/e-05/readme.md)| | | |
