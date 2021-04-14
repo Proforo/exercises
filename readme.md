@@ -34,18 +34,18 @@
 |  D-02  | Data Types and Operators           | | | |🟪|
 |  D-03  | Variable Assignment                | | | |🟪|
 |  D-04  | Template Literals                  | | | |🟪🧠|
-|  D-05  | Functions and Scope                |🟪| | | |
-|  D-06  | Object Literals                    | |🟪| | |
-|  D-07  | Document Elements                  |🟪| | | |
-|  D-08  | Event Listeners                    |🟪| | | |
-|  D-09  | Build-in Objects & Documentation   |🟪| | | |
-|  E-01  | Creating Elements                  | |🟪| | |
-|  E-02  | Arrays                             | |🟪| | |
-|  E-03  | Booleans and Conditions            |🟪| | | |
-|  E-04  | Event Delegation                   |🟪| | | |
-|  E-05  | Javascript Object Notation (JSON)  |🟪| | | |
-|  E-06  | Asynchronous Data Fetching         |🟪| | | |
-|  E-07  | Module Import                      |🟪| | | |
+|  D-05  | Functions and Scope                |[✅](whack-a-mole/d-05/readme.md)| | | |
+|  D-06  | Object Literals                    |[✅](whack-a-mole/d-06/readme.md)| | | |
+|  D-07  | Document Elements                  |[✅](whack-a-mole/d-07/readme.md)| | | |
+|  D-08  | Event Listeners                    |[✅](whack-a-mole/d-08/readme.md)| | | |
+|  D-09  | Build-in Objects & Documentation   |[✅](whack-a-mole/d-09/readme.md)| | | |
+|  E-01  | Creating Elements                  |[✅](whack-a-mole/e-01/readme.md)|🟪| | |
+|  E-02  | Arrays                             |[✅](whack-a-mole/e-02/readme.md)|🟪| | |
+|  E-03  | Booleans and Conditions            |[✅](whack-a-mole/e-03/readme.md)| | | |
+|  E-04  | Event Delegation                   |[✅](whack-a-mole/e-04/readme.md)| | | |
+|  E-05  | Javascript Object Notation (JSON)  |[✅](whack-a-mole/e-05/readme.md)| | | |
+|  E-06  | Asynchronous Data Fetching         |[✅](whack-a-mole/e-06/readme.md)| | | |
+|  E-07  | Module Import                      | | | |🟪|
 
 ### Legend
 

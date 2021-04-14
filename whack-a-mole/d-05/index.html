@@ -9,20 +9,25 @@
 	<body>
 
 		<header class="info">
-			<div class="score">Missed: <data value="0">0</data></div>
+			<div class="score">Missed: <data id="missed" value="0">0</data></div>
 			<h1 class="gamename">Whack-a-Mole</h1>
-			<div class="timer">Seconds: <data value="0">0</data></div>
+			<div class="timer">Seconds: <data id="duration" value="0">0</data></div>
 		</header>
 
 		<!-- All code here is "starting code" -->
-		<main class="mole-holes">
+		<main id="grass" class="mole-holes">
 			<div class="hole"></div>
-			<div class="hole mole"></div>
-			<div class="hole mole whacked"></div>
+			<div class="hole"></div>
+			<div class="hole"></div>
+			<div class="hole"></div>
+			<div class="hole"></div>
+			<div class="hole"></div>
+			<div class="hole"></div>
 		</main>
 
-		<div class="modal">
-			<table class="leaderboard">
+		<div id="modal" class="modal">
+
+			<table id="leaderboard" class="leaderboard hide">
 				<thead class="categories">
 					<tr>
 						<th>Name</th>
@@ -31,7 +36,7 @@
 						<th>Score</th>
 					</tr>
 				</thead>
-				<tbody class="scores">
+				<tbody id="scores" class="scores">
 					<tr><td>Tim Berners-Lee</td><td>29</td><td>0</td><td>10000</td></tr>
 					<tr><td>Ada Lovelace</td><td>31</td><td>0</td><td>9600</td></tr>
 					<tr><td>Alan Turing</td><td>32</td><td>1</td><td>9200</td></tr>
@@ -43,10 +48,25 @@
 				</tbody>
 				<caption class="leaders">
 					Leaderboard
-					<button class="btn close">x</button>
+					<button id="close" class="btn close">x</button>
 				</caption>
 			</table>
+
+			<article id="gamesummary" class="gamesummary hide">
+				<h2>Game over</h2>
+				<ul class="no-markers">
+					<li>You missed: <data id="summaryMissed" value=""></data></li>
+					<li>With a time of: <data id="summaryTime" value=""></data></li>
+					<li><strong>Final score: <data id="summaryScore" value=""></data></strong></li>
+				</ul>
+				<form class="collect-name">
+					<input type="text" name="yourname" id="yourname" placeholder="Join the leaderboard" class="inpt">
+					<button id="save" type="button" class="btn">Save</button>
+				</form>
+			</article>
+
 		</div>
 
+		<script src="script.js"></script>
 	</body>
 </html>

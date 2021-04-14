@@ -1,68 +1,81 @@
-// Timer
-// Score
-let seconds = 0
-let duration = 0
-let moleTimer;
-let clockTimer;
+let timeElapsed
+let missCount
+let moleTimer
+let clockTimer
+let frequency = 50 // Lower makes the moles appear faster
+let interval = 3 // Higher spaces out the moles
 
-
-let seconds = document.querySelector(`#seconds`)
-let whacks = document.querySelector(`#whacks`)
+let duration = document.querySelector(`#duration`)
+let missed = document.querySelector(`#missed`)
 let grass = document.querySelector(`#grass`)
-let start = document.querySelector(`#start`)
-let quit = document.querySelector(`#quit`)
+let save = document.querySelector(`#save`)
+let gamesummary = document.querySelector(`#gamesummary`)
 let modal = document.querySelector(`#modal`)
 let close = document.querySelector(`#close`)
 let leaderboard = document.querySelector(`#leaderboard`)
+let yourname = document.querySelector(`#yourname`)
+let scores = document.querySelector(`#scores`)
+let summaryMissed = document.querySelector(`#summaryMissed`)
+let summaryTime = document.querySelector(`#summaryTime`)
+let summaryScore = document.querySelector(`#summaryScore`)
+
+let leaders = []
+// [
+// 	{name: `Katherine Johnson`, secs: 34, miss: 2, score: 7200},
+// 	{name: `Tim Berners-Lee`, secs: 29, miss: 0, score: 10000},
+// 	{name: `Ada Lovelace`, secs: 31, miss: 0, score: 9600},
+// 	{name: `Alan Turing`, secs: 32, miss: 1, score: 9200},
+// 	{name: `Grace Hopper`, secs: 38, miss: 0, score: 8800},
+// 	{name: `Satoshi Nakamoto`, secs: 40, miss: 0, score: 7150},
+// 	{name: `Roy L. Clay, Sr.`, secs: 35, miss: 3, score: 6800},
+// 	{name: `Linus Torvalds`, secs: 41, miss: 1, score: 6700}
+// ]
+// console.log(leaders.sort((a, b) => {a.score < b.score}))
+// Maybe leaderboard isn't needed - it doesn't save anyways
+
 
 
 // Popup mole
-let doMoleAction = () => {
+let toggleMoles = () => {
 	let holes = document.querySelectorAll(`.hole:not(.whacked)`)
-	let which = Math.floor(Math.random() * holes.length)  // Make this number bigger than length? For some pause
+	let whichMole = Math.floor(Math.random() * (holes.length * interval))  // Make this number bigger than length? For some pause
 
-	if (holes.length > 0) {
-		holes[which].classList.toggle(`mole`)
-	} else {
-		clearInterval(moleTimer)
-		clearInterval(clockTimer)
-		
-		
-		grass.removeEventListener(`click`, onClickGrass)
-		modal.classList.add(`hide`)
-		// Or, restart?
-		// Give the option
-		// Increase speed with "levels"?
-		// Can you think of other ways to improve this game?
+	// console.log(which, holes.length)
+	// If the number of holes without whacked moles is greater than 0
+	if (whichMole < holes.length) {
+		holes[whichMole].classList.toggle(`mole`)
+	} else if (holes.length <= 0) {
+		itsGameOver()
 	}
 }
 
 // Clock
 let tickTock = () => {
-	duration++
-	seconds.textContent = duration
+	timeElapsed += .1
+	writeToClock(timeElapsed)
 }
 
 // Whack!
-let onClickGrass = (event) => {
-	let whach = event.target
-	if (whach.matches(`.mole:not(.whacked)`)) {
+let grassWasClicked = (event) => {
+	let whack = event.target
+	if (whack.matches(`.mole:not(.whacked)`)) {
 		// Got one!
-		whach.classList.add(`whacked`)
+		whack.classList.add(`whacked`)
 	} else {
-		// seconds
-		seconds++
-		whacks.textContent = seconds
+		// secs
+		missCount++
+		writeToMissed(missCount)
 	}
 }
 
 
-let restartGame = () => {
+let startGame = () => {
 	
-	seconds = 0
-	whacks.textContent = seconds
-	duration = 0
-	seconds.textContent = duration
+	timeElapsed = 0
+	writeToClock(timeElapsed)
+
+	missCount = 0
+	writeToMissed(missCount)
 	
 	// Remove all the moles? Does this need to get split up?
 	let moles = document.querySelectorAll(`.mole`)
@@ -70,46 +83,107 @@ let restartGame = () => {
 		mole.classList.remove(`mole`)
 	})
 
-	grass.addEventListener(`click`, onClickGrass) // whack
-	moleTimer = setInterval(doMoleAction, 200) // mole
-	clockTimer = setInterval(tickTock, 1000) // clock
+	// Remove all the moles? Does this need to get split up?
+	let whacked = document.querySelectorAll(`.whacked`)
+	whacked.forEach(whack => {
+		whack.classList.remove(`whacked`)
+	})
+
+	grass.addEventListener(`click`, grassWasClicked) // whack
+	moleTimer = setInterval(toggleMoles, frequency) // mole
+	clockTimer = setInterval(tickTock, 100) // clock
 	
+	// leaderboard.classList.add(`hide`)
 	modal.classList.add(`hide`)
 }
-start.addEventListener(`click`, restartGame)
 
 
-let closeLeaderboard = () => {
+let saveScore = () => {
+
+	gamesummary.classList.add(`hide`)
+	leaderboard.classList.remove(`hide`)
+
+	let totalScore = calculateScore(timeElapsed, missCount)
+	let userName = yourname.value.trim()
+
+	leaders.push({name: userName, secs: Number(timeElapsed.toFixed(1)), miss: missCount, score: totalScore})
+
+	buildTable(leaders)
+}
+
+
+let calculateScore = (time, missed) => {
+	return 10000 - (time * 50) - (missed * 200)
+}
+
+let itsGameOver = () => {
+
+	clearInterval(moleTimer)
+	clearInterval(clockTimer)
+
+	// Stop the clicking (maybe just throw up the modal?)
+	grass.removeEventListener(`click`, grassWasClicked)
+
+	summaryMissed.textContent = missCount
+	summaryTime.textContent = timeElapsed.toFixed(1)
+	summaryScore.textContent = calculateScore(timeElapsed, missCount).toFixed(1)
+
+	summaryMissed.setAttribute(`value`, missCount)
+	summaryTime.setAttribute(`value`, timeElapsed.toFixed(1))
+	summaryScore.setAttribute(`value`, calculateScore(timeElapsed, missCount).toFixed(1))
+
+
 	leaderboard.classList.add(`hide`)
+	gamesummary.classList.remove(`hide`)
+	modal.classList.remove(`hide`)
 }
-close.addEventListener(`click`, closeLeaderboard)
+save.addEventListener(`click`, saveScore)
 
 
 
-let followCursor = () => {
-	// leaderboard.classList.add(`hide`)
+let buildTable = (data) => {
 	
+	scores.innerHTML = `` // better clear
+	data.sort((a, b) => b.score - a.score)
+
+	data.forEach((leader) => {
+		let tr = scores.insertRow()
+		tr.insertCell().textContent = leader.name
+		tr.insertCell().textContent = leader.secs
+		tr.insertCell().textContent = leader.miss
+		tr.insertCell().textContent = leader.score.toFixed(1)
+	})
+
+	leaderboard.classList.remove(`hide`)
 }
-window.addEventListener(`mousemove`, followCursor)
+close.addEventListener(`click`, startGame)
 
 
 
+let writeToClock = (sec) => {
+	duration.textContent = (sec).toFixed(1)
+	duration.setAttribute(`value`, (sec).toFixed(1))
+}
+let writeToMissed = (miss) => {
+	missed.textContent = miss
+	missed.setAttribute(`value`, miss)
+}
 
 
-// Part 1: The moles
-// Part 2: Timer/score and cleanup
-// Array can be used to keep track of each mole
-// Array of leaders
+let getJsonData = async (url) => {
+	let response = await fetch(url)
+	return await response.json()
+}
 
-const leaders = [
-	{name: `Tim Berners-Lee`, seconds: 29, missed: 0, score: 10000},
-	{name: `Ada Lovelace`, seconds: 31, missed: 0, score: 9600},
-	{name: `Alan Turing`, seconds: 32, missed: 1, score: 9200},
-	{name: `Grace Hopper`, seconds: 38, missed: 0, score: 8800},
-	{name: `Katherine Johnson`, seconds: 34, missed: 2, score: 7200},
-	{name: `Satoshi Nakamoto`, seconds: 40, missed: 0, score: 7150},
-	{name: `Roy L. Clay, Sr.`, seconds: 35, missed: 3, score: 6800},
-	{name: `Linus Torvalds`, seconds: 41, missed: 1, score: 6700}
-]
-console.log(leaders.sort((a, b) => {a.score < b.score}))
-// Maybe leaderboard isn't needed - it doesn't save anyways
+let loadLeadersData = async () => {
+   leaders = await getJsonData(`data/leaders.json`)
+   buildTable(leaders)
+}
+
+window.addEventListener(`load`, ()=> {loadLeadersData()})
+
+// Some kind of window control function? A reducer? State manager?
+// Slow the game down
+
+
+

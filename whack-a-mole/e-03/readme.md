@@ -1,0 +1,153 @@
+## E-03: Booleans and Conditions
+
+1. Modify the `toggleMoles` function to have a condition that will only `.toggle()` the `mole` class on/off of the randomly selected hole, if the selected number `whichMole` is less than the total number of `.hole` that have `:not()` been `.whacked`
+   - Remember that `holes`, the variables containing the results of `querySelectorAll()` will behave much like an Array, thus will have a `length` parameter that will store the number of items in an Array (ie, the number of holes available in this case)
+1. Add an `else if` block to the previous condition statement, that will catch all cases where the `length` of the number of non-mole holes is less-than-or-equal-to `0` (meaning, no holes are left to pop up a mole)
+   - When this condition is met, call the `itsGameOver()` function that's been defined to wrap up the UI
+
+
+
+## Starting
+
+```js
+let timeElapsed
+let missCount
+let interval = 3
+
+let modal = document.querySelector(`#modal`)
+let leaderboard = document.querySelector(`#leaderboard`)
+let gamesummary = document.querySelector(`#gamesummary`)
+let duration = document.querySelector(`#duration`)
+let missed = document.querySelector(`#missed`)
+let yourname = document.querySelector(`#yourname`)
+let grass = document.querySelector(`#grass`)
+let save = document.querySelector(`#save`)
+let close = document.querySelector(`#close`)
+let scores = document.querySelector(`#scores`)
+let summaryMissed = document.querySelector(`#summaryMissed`)
+let summaryTime = document.querySelector(`#summaryTime`)
+let summaryScore = document.querySelector(`#summaryScore`)
+
+
+let leaders = [
+	{name: `Katherine Johnson`, secs: 34, miss: 2, score: 7200},
+	{name: `Tim Berners-Lee`, secs: 29, miss: 0, score: 10000},
+	{name: `Ada Lovelace`, secs: 31, miss: 0, score: 9600},
+	{name: `Alan Turing`, secs: 32, miss: 1, score: 9200},
+]
+
+let writeToClock = (sec) => {
+	duration.textContent = (sec).toFixed(1)
+	duration.setAttribute(`value`, (sec).toFixed(1))
+}
+
+let writeToMissed = (miss) => {
+	missed.textContent = miss
+	missed.setAttribute(`value`, miss)
+}
+
+let startGame = () => {
+	timeElapsed = 0
+	writeToClock(timeElapsed)
+
+	missCount = 0
+	writeToMissed(missCount)
+
+	let moles = document.querySelectorAll(`.mole`)
+	moles.forEach(mole => {
+		mole.classList.remove(`mole`)
+	})
+
+	let whacked = document.querySelectorAll(`.whacked`)
+	whacked.forEach(whack => {
+		whack.classList.remove(`whacked`)
+	})
+
+   modal.classList.add(`hide`)
+}
+
+let tickTock = () => {
+	timeElapsed += .1
+	writeToClock(timeElapsed)
+}
+
+let toggleMoles = () => {
+   let holes = document.querySelectorAll(`.hole:not(.whacked)`)
+	let whichMole = Math.floor(Math.random() * (holes.length * interval)) 
+
+   holes[whichMole].classList.toggle(`mole`)
+}
+
+let grassWasClicked = () => {
+   console.log(`Click!`)
+}
+
+let calculateScore = (time, missed) => {
+	return Number((10000 - (time * 50) - (missed * 200)).toFixed(1))
+}
+
+let saveScore = () => {
+	gamesummary.classList.add(`hide`)
+	leaderboard.classList.remove(`hide`)
+
+	let totalScore = calculateScore(timeElapsed, missCount)
+	let userName = yourname.value.trim()
+
+   console.log(`${userName} scored ${totalScore}, missing ${missCount} in ${timeElapsed} seconds`)
+
+   buildTable(leaders)
+}
+
+let buildTable = (data) => {
+	
+	scores.innerHTML = ``
+	data.sort((a, b) => b.score - a.score)
+
+	data.forEach((leader) => {
+		let tr = scores.insertRow()
+		tr.insertCell().textContent = leader.name
+		tr.insertCell().textContent = leader.secs
+		tr.insertCell().textContent = leader.miss
+		tr.insertCell().textContent = leader.score.toFixed(1)
+	})
+
+   leaderboard.classList.remove(`hide`)
+}
+
+let itsGameOver = () => {
+	summaryMissed.textContent = missCount
+	summaryTime.textContent = timeElapsed.toFixed(1)
+	summaryScore.textContent = calculateScore(timeElapsed, missCount).toFixed(1)
+
+	summaryMissed.setAttribute(`value`, missCount)
+	summaryTime.setAttribute(`value`, timeElapsed.toFixed(1))
+	summaryScore.setAttribute(`value`, calculateScore(timeElapsed, missCount).toFixed(1))
+
+
+	leaderboard.classList.add(`hide`)
+	gamesummary.classList.remove(`hide`)
+	modal.classList.remove(`hide`)
+}
+
+grass.addEventListener(`click`, grassWasClicked)
+save.addEventListener(`click`, saveScore)
+close.addEventListener(`click`, startGame)
+
+buildTable(leaders)
+```
+
+
+
+## Solution
+```js
+let toggleMoles = () => {
+	let holes = document.querySelectorAll(`.hole:not(.whacked)`)
+	let whichMole = Math.floor(Math.random() * (holes.length * interval))  
+
+	if (whichMole < holes.length) {
+		holes[whichMole].classList.toggle(`mole`)
+	} else if (holes.length <= 0) {
+		itsGameOver()
+	}
+}
+```

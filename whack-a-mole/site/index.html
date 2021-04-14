@@ -2,21 +2,22 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Whack-a-Mole (Event Delegation)</title>
+  <title>Whack-a-Mole</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 	<header class="info">
-		<div>Missed: <data id="whacks">0</data></div>
-		<div>Seconds: <time id="seconds">0</time></div>
-		<div><button class="btn" id="quit">Quit</button></div>
+		<div class="score">Missed: <data id="missed">0</data></div>
+		<h1 class="gamename">Whack-a-Mole</h1>
+		<div class="timer">Seconds: <time id="duration">0</time></div>
+		<!-- <div><button class="btn" id="quit">Quit</button></div> -->
 	</header>
 	<main class="mole-holes" id="grass">
 		<!-- Maybe call this "mole-holes"? -->
 		<div class="hole"></div>
 		<div class="hole"></div>
-		<div class="hole mole whacked"></div>
+		<div class="hole"></div>
 		<div class="hole"></div>
 		<div class="hole"></div>
 		<div class="hole"></div>
@@ -24,9 +25,9 @@
 	</main>
 
 	<div class="modal" id="modal">
-		<button class="btn start" id="start">Start</button>
+		<!-- <button class="btn start" id="start">Start</button> -->
 		
-		<table id="leaderboard" class="leaderboard">
+		<table id="leaderboard" class="leaderboard hide">
 			<thead class="categories">
 				<tr>
 					<th>Name</th>
@@ -35,19 +36,31 @@
 					<th>Score</th>
 				</tr>
 			</thead>
-			<tbody class="scores">
-				<tr><td>Tim Berners-Lee</td><td>29</td><td>0</td><td>10000</td></tr>
+			<tbody class="scores" id="scores">
+				<!-- <tr><td>Tim Berners-Lee</td><td>29</td><td>0</td><td>10000</td></tr>
 				<tr><td>Ada Lovelace</td><td>31</td><td>0</td><td>9600</td></tr>
 				<tr><td>Alan Turing</td><td>32</td><td>1</td><td>9200</td></tr>
 				<tr><td>Grace Hopper</td><td>38</td><td>0</td><td>8800</td></tr>
 				<tr><td>Katherine Johnson</td><td>34</td><td>2</td><td>7200</td></tr>
 				<tr><td>Satoshi Nakamoto</td><td>40</td><td>0</td><td>7150</td></tr>
 				<tr><td>Roy L. Clay, Sr.</td><td>35</td><td>3</td><td>6800</td></tr>
-				<tr><td>Linus Torvalds</td><td>41</td><td>1</td><td>6700</td></tr>
+				<tr><td>Linus Torvalds</td><td>41</td><td>1</td><td>6700</td></tr> -->
 			</tbody>
 			<caption class="leaders">Leaderboard<button id="close" class="btn close">x</button></caption>
 		</table>
 		
+		<article id="gamesummary" class="gamesummary hide">
+			<h2>Game over</h2>
+			<ul class="no-markers">
+				<li>You missed: <data id="summaryMissed" value=""></data></li>
+				<li>With a time of: <data id="summaryTime" value=""></data></li>
+				<li><strong>Final score: <data id="summaryScore" value=""></data></strong></li>
+			</ul>
+			<form class="collect-name">
+				<input type="text" name="yourname" id="yourname" placeholder="Join the leaderboard" class="inpt">
+				<button id="save" type="button" class="btn">Save</button>
+			</form>
+		</article>
 		
 
 	</div>

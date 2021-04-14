@@ -28,6 +28,18 @@ body {
 	text-shadow: 0 0 0.25rem rgba(0,0,0,0.75);
 /* 	background-color: rgba(0,0,0,0.25); */
 }
+.gamename {
+	margin: 0;
+	line-height: 1;
+	text-align: center;
+}
+.score, .timer {
+	flex-basis: 5em;
+}
+.timer {
+	text-align: right;
+}
+
 .mole-holes {
 	display: flex;
 	height: 100%;
@@ -119,7 +131,7 @@ body {
 	/* position: absolute; */
 	/* top: 10%; */
 	/* left: 10%; */
-	position: relative;
+	position: absolute;
 	width: 80%;
 	/* max-width: ????; */
 	/* width: clamp(300px, 80%, 600px); */
@@ -213,6 +225,43 @@ body {
 }
 
 
+.gamesummary {
+	font-size: 1.5rem;
+	line-height: 2;
+	text-align: center;
+	border-collapse: collapse;
+	width: 50%;
+	min-width: 15em;
+	margin: 0 auto;
+	box-shadow: 0 0 1em rgba(0,0,0,0.5);
+	position: absolute;
+	background-color: #eeeeee;
+	background-image: url('img/mole.png');
+	background-size: 2em;
+	background-blend-mode: soft-light;
+	/* Remember to make the .leaderboard absolute */
+}
+.no-markers {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.inpt { /* combine with .btn */
+	font: inherit;
+	border: none;
+	padding: 0 0.5rem;
+}
+.collect-name {
+	margin: 1em;
+	display: flex;
+}
+.collect-name .inpt {
+	flex-grow: 1;
+}
+.collect-name .btn {
+	background-color: #5c926a;
+	color: #c8e6c9;
+}
 
 
 
