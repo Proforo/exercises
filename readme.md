@@ -4,7 +4,7 @@
 |:------:|------------------------------------|:------------:|:---------:|:----------:|:----------:|
 |  A-01  | Getting started with the web       | | | |🟪|
 |  A-02  | Document outline                   | | |[✅](tasty-taco/a-02/readme.md)| |
-|  A-03  | Inline markup                      | | ||🟪|
+|  A-03  | Inline markup                      | | | |🟪|
 |  A-04  | Anchors & attributes               | | |[✅](tasty-taco/a-04/readme.md)| |
 |  A-05  | Let's get styling                  | | |[✅](tasty-taco/a-05/readme.md)| |
 |  A-06  | Lists & nesting                    | |[✅](todo-list/a-06/readme.md)| | |
