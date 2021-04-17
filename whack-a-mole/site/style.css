@@ -120,7 +120,7 @@ body {
 	cursor: auto;
 }
 .hole:hover {
-	cursor: url('img/slappy-up-over-64.png') 32 32, crosshair;
+	cursor: url('img/slappy-over.png') 32 32, crosshair;
 }
 .hole:active {
 	cursor: url('img/slappy-down-64.png') 32 32, crosshair;
