@@ -1,5 +1,3 @@
-/* STARTING CODE
-
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 * { 
 	box-sizing: border-box; 
@@ -15,112 +13,14 @@ body {
 	background-size: 8rem, 100%;
 	cursor: url('img/slappy-up.png') 32 32, crosshair;
 }
-.btn {
+.btn, .inpt {
 	font: inherit;
 	border: none;
 	padding: 0 0.5rem;
 }
-.info {	
-	display: flex;
-	justify-content: space-between;
-	padding: 1rem;
-	font-size: 2rem;
-	color: #fff;
-	text-shadow: 0 0 0.25rem rgba(0,0,0,0.5);
-}
-.gamename {
-	margin: 0;
-	line-height: 1;
-	text-align: center;
-}
-.score, .time {
-	flex-basis: 5em;
-}
-.time {
-	text-align: right;
-}
-.leaderboard {
-	font-size: 1.5rem;
-	line-height: 2;
-	text-align: center;
-	border-collapse: collapse;
-	width: 80%;
-	margin: 0 auto;
-	box-shadow: 0 0 1em rgba(0,0,0,0.5);
-}
-.leaderboard tr :first-child {
-	padding-left: 1rem;
-	text-align: left;
-}
-.leaderboard tr :last-child {
-	padding-right: 1rem;
-	text-align: right;
-}
-.categories {
-	background-color: #5c926a;
-	color: #c8e6c9;
-}
-.scores {
-	background-color: #eeeeee;
-	background-image: url('img/mole.png');
-	background-size: 2em;
-	background-blend-mode: soft-light;
-}
-.scores tr:nth-child(even) {
-	background-color: rgba(0,0,0,0.1);
-}
-.leaders {
-	color: #fff;
-	font-size: 3rem;
-	line-height: 1;
-}
-.hole {
-	width: 10rem;
-	height: 7.5rem;
-	margin: 0.25rem;
-	border-radius: 50%;
-	background-color: #311e11;
-	border-top: 1rem solid #4c2f1e;
-}
-.hole:hover {
-	cursor: url('img/slappy-over.png') 32 32, crosshair;
-}
-.hole:active {
-	cursor: url('img/slappy-down.png') 32 32, crosshair;
-}
-.mole {
-	border: none;
-	background-image: url('img/mole.png');
-	background-size: 80%;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-.whacked {
-	background-color: #ffcc00;
-	background-image: url('img/whacked.png');
-}
-*/
-
-
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-* { 
-	box-sizing: border-box; 
-}
-html, body {
-	height: 100%;
-	margin: 0;
-}
-body {
-	font: 700 2rem 'Amatic SC', helvetica, arial, system-ui, sans-serif;
-	background-image: url('img/scribble.jpg'), radial-gradient(#779956, #4a682e);
-	background-blend-mode: multiply;
-	background-size: 8rem, 100%;
-	cursor: url('img/slappy-up.png') 32 32, crosshair;
-}
-.btn {
-	font: inherit;
-	border: none;
-	padding: 0 0.5rem;
+.no-markers {
+	list-style-type: none;
+	padding-left: 0;
 }
 .info {	
 	display: flex;
@@ -154,7 +54,7 @@ body {
 	width: 80%;
 	margin: 0 auto;
 	box-shadow: 0 0 1em rgba(0,0,0,0.5);
-	position: relative;
+	position: absolute;
 }
 .leaderboard tr :first-child {
 	padding-left: 1rem;
@@ -181,6 +81,15 @@ body {
 	color: #fff;
 	font-size: 3rem;
 	line-height: 1;
+}
+.mole-holes {
+	display: flex;
+	height: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	width: 42rem;
+	margin: auto;
 }
 .hole {
 	width: 10rem;
@@ -231,4 +140,33 @@ body {
 	position: absolute;
 	top: 2rem;
 	right: -0.5rem;
+}
+.gamesummary {
+	font-size: 1.5rem;
+	line-height: 2;
+	text-align: center;
+	border-collapse: collapse;
+	width: 50%;
+	min-width: 15em;
+	margin: 0 auto;
+	box-shadow: 0 0 1em rgba(0,0,0,0.5);
+	position: absolute;
+	background-color: #eeeeee;
+	background-image: url('img/mole.png');
+	background-size: 2em;
+	background-blend-mode: soft-light;
+}
+.collect-name {
+	margin: 1em;
+	display: flex;
+}
+.collect-name .inpt {
+	flex-grow: 1;
+}
+.collect-name .btn {
+	background-color: #5c926a;
+	color: #c8e6c9;
+}
+.hide {
+	display: none;
 }
