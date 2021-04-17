@@ -16,13 +16,14 @@
    - Add a few sample `<p>` inside of this new `<section>` to give it some weight
 7. Sections need headings, so add <h2> headings for each new section. Name them “Sub-tasks” and “Notes” respectively.
    1. Also add an `<h1>` heading to the top of the body, above the `.all-tasks` list that describes the entire list, perhaps a value of "Task List", or something similar
-8. Add some color to the `<section>` elements by assigning each the `class` of `taskinfo`
+8. Add some color to the `<section>` elements by assigning each a `class` value of `taskinfo`
    1. Write a rule that selects the `.taskinfo` elements and assign them all a `background-color` of `rgba(255,255,255,0.15)`
       - Notice the layering affect that occurs with the translucent backgrounds when set to an opposing colour with low opacity
-9. Add a `<span>` to each of the `<details>` task elements, directly before the `<summary>`, with `&check;` as its content.
-   1. Test to ensure the `&check;` converts to a checkmark character (✓) in the browser. This is an HTML "special character" shortcode.
-   1. Add a class of `status` to each new `<span>` and then write a rule that selects elements with the `.status` class, giving them a `background-color` of `rgba(255,255,255,0.15)`, and the `color` to be `transparent`, hiding the checkmark
-   1. Directly below the `.status` rule, write a new rule to select `.status-complete` elements that will change the `color` back to `rgb(255,255,255)`
-      1. Apply this class to at least a few of the `.status` elements, in addition to the existing `status` class. You should see the checkmark disappear because of the double definition of `color` and "cascading" - a concept we will dig deeper on in an upcoming lesson.
+9. Add a new `<span>` element to each of the `<details>` task elements as its first child (directly before the `<summary>`), giving each the content `&check;` between the opening and closing `<span>` tags
+   1. Test the page in your browser to ensure the `&check;` value converts to a checkmark character (✓). This is an HTML "special character" shortcode that will convert to a non-standard character when rendered by the browser.
+   2. Add a class of `status` to each of the new `<span>` elements, then write a CSS rule that selects these `.status` elements, giving them each a `background-color` of `rgba(255,255,255,0.15)`, and the `color` of the text set to `transparent` (this will "hide" the checkmark)
+   3. Directly below the `.status` rule you just wrote in CSS, add a new rule that will select `.status-complete` elements, giving it a `color` value of `rgb(255,255,255)`
+      1. As a test, apply the `status-complete` class to at least a few of the `.status` elements, so that they will have both the `status` and `status-complete` class value. 
+         - For those elements, you should observe the checkmark (seemingly) disappear due to the same element having *two* definitions for `color`. This happens because of a concept called "cascading" - something we will dig deeper on in an upcoming lesson.
    
    Notice that the new `.status` element does not appear ahead of the `<summary>` element. The browser will force certain elements into specific position due to their type. The `<summary>` within `<details>` is one such element.
