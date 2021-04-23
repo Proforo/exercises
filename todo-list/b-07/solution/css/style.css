@@ -1,0 +1,115 @@
+/*
+body {
+	background-color: rgb(30,30,35);
+	color: rgb(255,255,255);
+	margin: 0;
+}
+h1 {
+	margin: 1rem 0;
+}
+h2 {
+	margin: 1rem 0;
+}
+.all-tasks {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0 1rem;
+}
+.todo {
+	background-color: rgba(255,255,255,0.15);
+	padding: 0 1rem;
+	margin: 1rem 0;
+	border-top: 0.25rem solid rgba(255,255,255,0.15);
+	border-radius: 0.5em;
+}
+.task {
+	font-weight: 700;
+	margin: 1rem 0;
+}
+.taskinfo {
+	background-color: rgba(255,255,255,0.15);
+	margin: 1em 0;
+	padding: 0 1em;
+	border-radius: 0.5em;
+}
+.status {
+	background-color: rgba(255,255,255,0.15);
+	border-radius: 0.5rem;
+	color: transparent;
+}
+.status-complete {
+	color: rgb(255,255,255);
+}
+.subpoints {
+ margin: 1rem 0;
+}
+
+*/
+
+body {
+	background-color: rgb(30,30,35);
+	color: rgb(255,255,255);
+	font: normal 400 1rem/1.5 system-ui, sans-serif;
+	margin: 0;
+}
+h1 {
+	margin: 1rem 0;
+	text-align: center;
+}
+h2 {
+	margin: 1rem 0;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.50);
+
+}
+.all-tasks {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0 1rem;
+}
+.todo {
+	background-color: rgba(255,255,255,0.15);
+	padding: 0 1rem;
+	margin: 1rem 0;
+	border-top: 0.25rem solid rgba(255,255,255,0.15);
+	border-radius: 0.5em;
+}
+.task {
+	font-weight: 700;
+	margin: 1rem 0;
+}
+.taskinfo {
+	background-color: rgba(255,255,255,0.15);
+	margin: 1em 0;
+	padding: 0 1em;
+	border-radius: 0.5em;
+}
+.status {
+	background-color: rgba(255,255,255,0.15);
+	border-radius: 0.5rem;
+	color: transparent;
+}
+.status-complete {
+	color: rgb(255,255,255);
+}
+.subpoints {
+ margin: 1rem 0;
+}
+.due {
+	background-color: rgba(255,255,255,0.15);
+	font-weight: 400;
+	font-size: 0.8rem;
+	margin-left: 0.5rem;
+	border-radius: 0.25rem;
+	vertical-align: 0.1rem;
+	display: inline-block;
+	padding: 0 0.25rem; 
+	line-height: 1.5;
+}
+.task-complete {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+

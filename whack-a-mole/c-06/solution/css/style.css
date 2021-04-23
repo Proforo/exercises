@@ -1,0 +1,136 @@
+/* STARTING CODE
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+* { 
+	box-sizing: border-box; 
+}
+html, body {
+	height: 100%;
+	margin: 0;
+}
+body {
+	font: 700 2rem 'Amatic SC', helvetica, arial, system-ui, sans-serif;
+	background-image: url('img/scribble.jpg'), radial-gradient(#779956, #4a682e);
+	background-blend-mode: multiply;
+	background-size: 8rem, 100%;
+}
+.leaderboard {
+	font-size: 1.5rem;
+	line-height: 2;
+	text-align: center;
+	border-collapse: collapse;
+	width: 80%;
+	margin: 0 auto;
+}
+.categories {
+	background-color: #5c926a;
+	color: #c8e6c9;
+}
+.scores {
+	background-color: #eeeeee;
+	background-image: url('img/mole.png');
+	background-size: 2em;
+	background-blend-mode: soft-light;
+}
+.leaders {
+	color: #fff;
+	font-size: 3rem;
+	line-height: 1;
+}
+.hole {
+	width: 10rem;
+	height: 7.5rem;
+	margin: 0.25rem;
+	border-radius: 50%;
+	background-color: #311e11;
+	border-top: 1rem solid #4c2f1e;
+}
+.mole {
+	border: none;
+	background-image: url('img/mole.png');
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.whacked {
+	background-color: #ffcc00;
+	background-image: url('img/whacked.png');
+}
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+* { 
+	box-sizing: border-box; 
+}
+html, body {
+	height: 100%;
+	margin: 0;
+}
+body {
+	font: 700 2rem 'Amatic SC', helvetica, arial, system-ui, sans-serif;
+	background-image: url('img/scribble.jpg'), radial-gradient(#779956, #4a682e);
+	background-blend-mode: multiply;
+	background-size: 8rem, 100%;
+	cursor: url('img/slappy-up.png') 32 32, crosshair;
+}
+.leaderboard {
+	font-size: 1.5rem;
+	line-height: 2;
+	text-align: center;
+	border-collapse: collapse;
+	width: 80%;
+	margin: 0 auto;
+}
+.leaderboard tr :first-child {
+	padding-left: 1rem;
+	text-align: left;
+}
+.leaderboard tr :last-child {
+	padding-right: 1rem;
+	text-align: right;
+}
+.categories {
+	background-color: #5c926a;
+	color: #c8e6c9;
+}
+.scores {
+	background-color: #eeeeee;
+	background-image: url('img/mole.png');
+	background-size: 2em;
+	background-blend-mode: soft-light;
+}
+.scores tr:nth-child(even) {
+	background-color: rgba(0,0,0,0.1);
+}
+.leaders {
+	color: #fff;
+	font-size: 3rem;
+	line-height: 1;
+}
+.hole {
+	width: 10rem;
+	height: 7.5rem;
+	margin: 0.25rem;
+	border-radius: 50%;
+	background-color: #311e11;
+	border-top: 1rem solid #4c2f1e;
+}
+.hole:hover {
+	cursor: url('img/slappy-over.png') 32 32, crosshair;
+}
+.hole:active {
+	cursor: url('img/slappy-down.png') 32 32, crosshair;
+}
+.mole {
+	border: none;
+	background-image: url('img/mole.png');
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.whacked {
+	background-color: #ffcc00;
+	background-image: url('img/whacked.png');
+}
+
