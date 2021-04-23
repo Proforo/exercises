@@ -13,25 +13,3 @@ calculateScore(10, 10)  // 7500
 calculateScore(25, 20)  // 4750
 calculateScore(5, 15)   // 6750
 ```
-
-
-
-## Complete
-
-```js
-let timeElapsed
-let missCount
-
-let startGame = () => {
-	timeElapsed = 0
-	missCount = 0
-}
-
-let tickTock = () => {
-	timeElapsed += .1
-}
-
-let calculateScore = (time, missed) => {
-	return 10000 - (time * 50) - (missed * 200)
-}
-```

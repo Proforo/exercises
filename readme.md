@@ -69,7 +69,7 @@ Writing [possible quiz questions here](quizzes/quizzes.md) for the time being. W
 - [ ] Check all `planning.md` per-project files for remaining excluded notes
 
 
-## Needs split
-- `a-08`
-- Images for `tasty` > `b-03` onward
-- Test image urls, and adjust in readme as well
+## Outstanding
+- `a-08` needs split?
+- Test image urls in css, and adjust in readme as well
+- `e-07`

@@ -8,21 +8,3 @@
    1. The function will call the `getJsonData` function, passing it the url to the JSON file, and then `await` the resulting leader data, then assign it to the `leaders` variable that's currently an empty Array
 1. Modify the last line of code for the application, such that the application does not invoke `buildTable(leaders)` to begin the game, but instead invokes a new function named `loadLeadersData()`
 1. Complete the application by moving the `buildTable(leaders)` code removed in the previous step, into the final line of the `loadLeadersData` function, so that once the `leaders` are returned asynchronously, the board will be loadedxw
-
-
-
-```js
-let leaders = []
-
-let getJsonData = async (url) => {
-	let response = await fetch(url)
-	return await response.json()
-}
-
-let loadLeadersData = async () => {
-   leaders = await getJsonData(`data/leaders.json`)
-   buildTable(leaders)
-}
-
-loadLeadersData()
-```
