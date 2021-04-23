@@ -67,6 +67,7 @@ Writing [possible quiz questions here](quizzes/quizzes.md) for the time being. W
 - [ ] Fix folder for `.css` files and then path for images in css
 - [ ] Tasty taco image assets need to be replaced/revisited (css and html) for continuity
 - [ ] Check all `planning.md` per-project files for remaining excluded notes
+- [ ] If referring to the rule, use `.classname`, if the `class` attribute value, don't include the `.`
 
 
 ## Outstanding
