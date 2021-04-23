@@ -177,7 +177,6 @@ img {
 
 @media screen and (min-width: 40rem) {
 	.hero {
-		background-image: url('img/header-md.jpg');
 		padding-top: 12rem;
 		padding-bottom: 17rem;
 	}
@@ -196,8 +195,4 @@ img {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.hero {
-		background-image: url('img/header-lg.jpg');
-	}
 }
-	

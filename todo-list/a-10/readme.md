@@ -3,7 +3,7 @@
 
 
 ## Steps
-1. Wrap the entirety of the content within each of the first-level `.todo` list-items in a seperate `<details>` element
+1. Wrap the entirety of the content within each of the first-level `.todo` list-items in a separate `<details>` element
    - This includes `.todo` items that have sub-task lists, as well as those without 
 2. Within the details element, wrap only the name of that main task in a `<summary>` element
    - **Observe**: The `<details>` element becomes a functional dropdown, with the `<summary>` element as the toggle for exposing the additional content within

@@ -115,10 +115,6 @@ img {
 .menu-category {
 	padding: 3rem 1rem;
 }
-.menu-category#tacos {
-	background-color: var(--col-b);
-	color: var(--col-b-on);
-}
 .category-header {
 	text-align: center;
 	margin: 2rem 0;
@@ -141,6 +137,7 @@ img {
 	padding: 0.25rem 1rem;
 }
 
+
 /* Menu items */
 .menu-item {
 	margin: 5rem 0;
@@ -160,39 +157,9 @@ img {
 	color: var(--col-b);
 	font-style: italic;
 }
-.menu-category#tacos .item-price {
-	color: var(--col-a-on);
-}
-.menu-category#tacos .item-description {
-	border-color: var(--col-b-on);
-}
-
-/* Footer */
 .content-footer {
 	background-color: var(--col-d);
 	color: var(--col-d-on);
 	text-align: center;
 	padding: 5rem 1rem;
-}
-
-@media screen and (min-width: 40rem) {
-	.hero {
-		padding-top: 12rem;
-		padding-bottom: 17rem;
-	}
-	.food-menu {
-		margin-top: -5rem;
-	}
-	.menu-intro {
-		padding: 8rem 4rem;
-	}	
-}
-
-@media screen and (min-width: 60rem) {
-	.container {
-		box-sizing: border-box;
-		max-width: 80rem;
-		margin-left: auto;
-		margin-right: auto;
-	}
 }

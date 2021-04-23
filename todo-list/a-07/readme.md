@@ -13,5 +13,4 @@
    1. Assign the translucent color `rgba(255,255,255,0.15)` to the `background-color` of the `.todo` element
 
 
-
 <!-- Maybe add the body font setup here? -->

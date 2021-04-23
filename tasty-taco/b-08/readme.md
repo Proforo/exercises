@@ -4,7 +4,7 @@ In this exercise, you will be developing a design system using variables, means 
 
 Complete the following steps in CSS to complete the exercise.
 
-1. Define a rule as the very top of the `.css` document that will select the `<html>` element
+1. Define a rule as the very top of `style.css` that will select the `<html>` element
 1. Within it, define two variables: `--font-a` and `--font-b`, assigning each the respective font sets defined earlier: `Helvetica, Arial, sans-serif` and `Georgia, 'Times New Roman', Times, serif`
    1. Replace all instances of the two font sets in the CSS with the new `var(--font-a)` and `var(--font-b)` values
 1. Define four color pairs, where each pair is made up of a colour intended as a `background-color`, and an "on" color, used to set the foreground `color` of text and other accents. For example, if a colour was named `--col-a`, then ensure the pairing colour is named `--col-a-on` (or similar). For the colours, use the following pairs, which are already set throughout the CSS document in various places:

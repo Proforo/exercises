@@ -1,22 +1,8 @@
-html {
-	--col-a: rgb(255, 255, 255);
-	--col-a-on: rgb(20, 20, 20);
-	--col-b: rgb(203, 68, 33);
-	--col-b-on: rgb(255, 255, 255);
-	--col-c: rgba(255, 173, 50, 0.9);
-	--col-c-on: rgb(20, 20, 20);
-	--col-d: rgb(238, 238, 238);
-	--col-d-on: rgb(96, 96, 96);
-	--col-accent: rgba(0, 0, 0, 0.25);
-	--font-a: Helvetica, Arial, sans-serif;
-	--font-b: Georgia, 'Times New Roman', Times, serif;
-}
-
 body {
 	margin: 0;
-	background-color: var(--col-a);
-	color: var(--col-a-on);
-	font-family: var(--font-a);
+	background-color: rgb(255, 255, 255);
+	color: rgb(20, 20, 20);
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 1rem;
 	line-height: 1.3;
 }
@@ -27,8 +13,8 @@ img {
 
 /* Header and menu */
 .content-header {
-	background-color: var(--col-b);
-	color: var(--col-b-on);
+	background-color: rgb(203, 68, 33);
+	color: rgb(255, 255, 255);
 }
 .navigation {
 	padding: 1rem 2rem;
@@ -41,21 +27,21 @@ img {
 	padding-left: 0;
 }
 .nav-list {
-	border-top: 1px solid var(--col-accent);
+	border-top: 1px solid rgba(0,0,0,0.25);
 	margin: 2rem 0;
 }
 
 /* Anchors */
 .nav-list a {
 	display: block;
-	color: var(--col-b-on);
-	font-family: var(--font-b);
+	color: rgb(255, 255, 255);
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size: 1.125rem;
 	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 1rem 0;
-	border-bottom: 1px solid var(--col-accent);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
 }
 .nav-sublist a {
 	font-weight: 400;
@@ -70,23 +56,23 @@ img {
 	background-size: cover;
 	background-position: center;
 	padding: 4rem 0 17rem 0;
-	text-shadow: 0 0 1rem var(--col-accent);
+	text-shadow: 0 0 1rem rgba(0,0,0,0.25);
 }
 .slogans {
 	padding: 0 2rem;
 }
 .primary-slogan {
-	font-family: var(--font-b);
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size: 3rem;
 	font-weight: 700;
 	text-transform: uppercase;
-	color: var(--col-b-on);
+	color: rgb(255, 255, 255);
 	margin: 1rem 0;
 }
 .secondary-slogan {
 	font-size: 1.5rem;
 	font-weight: 700;
-	color: var(--col-b-on);
+	color: rgb(255, 255, 255);
 	margin: 1rem 0;
 }
 
@@ -97,16 +83,16 @@ img {
 	margin-top: -12rem;
 }
 .menu-intro {
-	background-color: var(--col-c);
-	color: var(--col-c-on);
+	background-color: rgb(255, 173, 50);
+	color: rgb(20, 20, 20);
 	padding: 5rem 1rem;
 	text-align: center;
-	border-bottom: 0.5rem solid var(--col-accent);
+	border-bottom: 0.5rem solid rgba(0,0,0,0.25);
 	font-size: 1.5rem;
 }
 .business-name {
 	font-size: 2.5rem;
-	font-family: var(--font-b);
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	text-transform: uppercase;
 }
 
@@ -120,15 +106,15 @@ img {
 }
 .category-name {
 	font-size: 2.5rem;
-	font-family: var(--font-b);
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	text-transform: uppercase;
 	text-align: center;
 	margin: 1rem 0;
 }
 .callout {
 	display: inline-block;
-	background-color: var(--col-c);
-	color: var(--col-c-on);
+	background-color: rgb(255, 173, 50);
+	color: rgb(20, 20, 20);
 	font-style: italic;
 	font-weight: 700;
 	text-align: center;
@@ -142,8 +128,8 @@ img {
 	margin: 5rem 0;
 }
 .item-description {
-	border-top: 1px solid var(--col-a-on);
-	border-bottom: 1px solid var(--col-a-on);
+	border-top: 1px solid rgb(20, 20, 20);
+	border-bottom: 1px solid rgb(20, 20, 20);
 	text-align: center;
 	margin: 2rem 1rem;
 	padding: 2rem;
@@ -153,12 +139,12 @@ img {
 	margin: 1rem 0;
 }
 .item-price {
-	color: var(--col-b);
+	color: rgb(203, 68, 33);
 	font-style: italic;
 }
 .content-footer {
-	background-color: var(--col-d);
-	color: var(--col-d-on);
+	background-color: rgb(238, 238, 238);
+	color: rgb(96, 96, 96);
 	text-align: center;
 	padding: 5rem 1rem;
 }

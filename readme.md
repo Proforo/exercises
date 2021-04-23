@@ -67,3 +67,9 @@ Writing [possible quiz questions here](quizzes/quizzes.md) for the time being. W
 - [ ] Fix folder for `.css` files and then path for images in css
 - [ ] Tasty taco image assets need to be replaced/revisited (css and html) for continuity
 - [ ] Check all `planning.md` per-project files for remaining excluded notes
+
+
+## Needs split
+- `a-08`
+- Images for `tasty` > `b-03` onward
+- Test image urls, and adjust in readme as well

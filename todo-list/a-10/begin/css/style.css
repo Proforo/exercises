@@ -10,19 +10,3 @@ body {
 .todo {
 	background-color: rgba(255,255,255,0.15);
 }
-
-.task {
-	font-weight: 700;
-}
-
-.taskinfo {
-	background-color: rgba(255,255,255,0.15);
-}
-
-.status {
-	background-color: rgba(255,255,255,0.15);
-	color: transparent;
-}
-.status-complete {
-	color: rgb(255,255,255);
-}
