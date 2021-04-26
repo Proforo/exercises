@@ -1,6 +1,6 @@
 # Exercise A-08: Font and inheritance
 
-In this exercise, be setting some of the primary font styling, including the `font-family`, `font-size`, `font-weight` and `font-style`.
+In this exercise, you will be setting some of the primary font styling, including the `font-family`, `font-size`, `font-weight` and `font-style`.
 
 Complete the following steps in CSS to complete the exercise.
 
@@ -10,8 +10,8 @@ This page will use two font stacks throughout the entire document:
 - Sans-serif set: `Helvetica, Arial, sans-serif`
 - Serif set: `Georgia, 'Times New Roman', Times, serif`
 
-1. Apply the "Sans-serif" set to `font-family` of the `body` rule, so that it's applied to all inheriting elements by default
-2. Apply the "Serif" set to the `font-family` of the following elements, creating new rules where necessary:
+1. Apply the "Sans-serif" font set to be the `font-family` value within the `body` rule. This will apply it to all inheriting elements by default
+2. Apply the "Serif" font set to the `font-family` property of the following elements, creating a new rules with the given selector if one doesn't already exist:
    - `a`
    - `.primary-slogan`
    - `.business-name`
@@ -21,9 +21,13 @@ This page will use two font stacks throughout the entire document:
 
 1. Always begin by setting the base `font-size` of the document, in the rule that selects the `<body>`, as all descending elements will inherit from that. Assign a value of `1rem`, which is a multiple of the browser's set font-size
    - Remember that the base unit of a single `rem` can be modified by assigning a new value to a rule selecting the `html` element. In this case, there's no specific need to do so as of yet.
-1. The three levels of heading in this document (`<h1>`, `<h2>` and `<h3>`) all now have classes assigned to them (`.business-name`, `.category-name` and `item-name` respectively). To the rules that apply to those elements, assign the values `2.5rem`, `2.5rem`, and `1rem` respectively
-1. Increase the size of the `a` element's text, by setting their selecting rule's `font-size` to a value of `1.125rem`
-1. Assign the sizes `3rem` and `1.5rem` to the `.primary-slogan` and `.secondary-slogan` respectively, creating a new rule too select the `.secondary-slogan` (as this is the first declaration applied)
+1. Notice in the HTML that the three levels of heading in this document (`<h1>`, `<h2>` and `<h3>`) all have classes assigned to them (`.business-name`, `.category-name` and `.item-name` respectively). To the rules that apply to those elements, assign the following `font-size` values:
+   1. `.business-name` rule: `2.5rem`
+   1. `.category-name` rule: `2.5rem`
+   1. `.item-name` rule: `1rem`
+1. Increase the size of the text for all `<a>` elements by setting the `font-size` for the rule that selects all anchors, to a value of `1.125rem`
+1. Assign the sizes `3rem` and `1.5rem` to the elements with the class `.primary-slogan` and `.secondary-slogan` respectively
+   1. Be sure to create a new rule to select the elements with a class value of `.secondary-slogan`, as this is the first declaration being applied to elements with that class value
    
 ## Part 3: Font style and weight
 
