@@ -67,7 +67,7 @@ img {
 
 /* Hero section */
 .hero {
-	background-image: url('img/header-sm.jpg');
+	background-image: url('../img/header-sm.jpg');
 	background-size: cover;
 	background-position: center;
 	padding: 4rem 0 17rem 0;
@@ -177,7 +177,7 @@ img {
 
 @media screen and (min-width: 40rem) {
 	.hero {
-		background-image: url('img/header-md.jpg');
+		background-image: url('../img/header-md.jpg');
 		padding-top: 12rem;
 		padding-bottom: 17rem;
 	}
@@ -228,7 +228,7 @@ img {
 		border: none;
 	}
 	.hero {
-		background-image: url('img/header-lg.jpg');
+		background-image: url('../img/header-lg.jpg');
 	}
 	.menu-item {
 		flex-basis: 25%;

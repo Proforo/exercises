@@ -52,7 +52,7 @@ img {
 
 /* Hero section */
 .hero {
-	background-image: url('img/header.jpg');
+	background-image: url('../img/header.jpg');
 	background-size: cover;
 	background-position: center;
 	padding: 4rem 0 17rem 0;

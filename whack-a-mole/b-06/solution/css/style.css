@@ -9,7 +9,7 @@ html, body {
 }
 body {
 	font: 700 2rem 'Amatic SC', helvetica, arial, system-ui, sans-serif;
-	background-image: url('img/scribble.jpg'), radial-gradient(#779956, #4a682e);
+	background-image: url('../img/scribble.jpg'), radial-gradient(#779956, #4a682e);
 	background-blend-mode: multiply;
 	background-size: 8rem, 100%;
 }
@@ -25,7 +25,7 @@ body {
 }
 .scores {
 	background-color: #eeeeee;
-	background-image: url('img/mole.png');
+	background-image: url('../img/mole.png');
 	background-size: 2em;
 	background-blend-mode: soft-light;
 }
@@ -44,12 +44,12 @@ body {
 }
 .mole {
 	border: none;
-	background-image: url('img/mole.png');
+	background-image: url('../img/mole.png');
 	background-size: 80%;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .whacked {
 	background-color: #ffcc00;
-	background-image: url('img/whacked.png');
+	background-image: url('../img/whacked.png');
 }
