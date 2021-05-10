@@ -1,8 +1,6 @@
 # Exercise B-03: Images & paths
 
-In this exercise, you will add `<img>` elements to the document, using various path types.
-
-Complete the following steps in HTML or CSS (as indicated) to complete the exercise.
+In this exercise, you will add `<img>` elements to the document, using various path types. Complete the following steps in HTML or CSS (as indicated) to complete the exercise.
 
 ## Part 1: Paths
 
