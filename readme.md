@@ -30,10 +30,10 @@
 |  C-08  | Element display                    | | | |🟪|
 |  C-09  | Flex container                     | | |[✅](tasty-taco/c-09/readme.md)| |
 |  C-10  | Position                           |[✅](whack-a-mole/c-10/readme.md)| | | |
-|  D-01  | Introduction to JavaScript         | | | |🟪|
-|  D-02  | Data Types and Operators           | | | |🟪|
-|  D-03  | Variable Assignment                | | | |🟪|
-|  D-04  | Template Literals                  | | | |🟪🧠|
+|  D-01  | Introduction to JavaScript         |[✅](whack-a-mole/d-01/readme.md)| | | |
+|  D-02  | Data Types and Operators           |[✅](whack-a-mole/d-02/readme.md)| | | |
+|  D-03  | Variable Assignment                |[✅](whack-a-mole/d-03/readme.md)| | | |
+|  D-04  | Template Literals                  |[✅](whack-a-mole/d-04/readme.md)| | | |
 |  D-05  | Functions and Scope                |[✅](whack-a-mole/d-05/readme.md)| | | |
 |  D-06  | Object Literals                    |[✅](whack-a-mole/d-06/readme.md)| | | |
 |  D-07  | Document Elements                  |[✅](whack-a-mole/d-07/readme.md)| | | |
