@@ -1,7 +1,8 @@
 # D-05: Functions and Scope
 
-1. Write a function named `startGame` that will be called when a game begins, or restarts, that will set the `timeElapsed` and `missCount` variables to the number `0`
-1. Write a function named `tickTock` that will be called on a steady interval (every 100 milliseconds) to maintain the game clock and determine how long it took to whack all of the moles. Each time the function is called, add `0.1` to the `timeElapsed` variable
+1. Define the variables `timeElapsed` and `missCount` in `script.js`, this time, without assigning them a starting value
+1. Directly below, write a new function named `startGame` that will be called when a game begins, or restarts, that will set the `timeElapsed` and `missCount` variables to the number `0`
+1. Write a new function named `tickTock` that will be called on a steady interval (every 100 milliseconds) to maintain the game clock and determine how long it took to whack all of the moles. Each time the function is called, add `0.1` to the `timeElapsed` variable
 1. Write a function named `calculateScore` that will be passed two arguments when called and will return a game score
    1. The first argument value should be stored into a parameter named `time`
    1. The second argument value should be stored into a parameter named `missed`
