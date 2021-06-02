@@ -1,6 +1,6 @@
 # D-08: Event Listeners
 
-1. Use the `querySelector()` method to search the `document` for the element with the selector `#grass`, then store a reference to that element as a variable names `grass`
+1. Use the `document.querySelector()` method to search the document for the element with the `id` selector `#grass`, then store the reference to that element as a variable names `grass`
    - Listen to the `grass` element for a `click` by invoking the `addEventListener()` method at the bottom of the script. When clicked, ensure the `grassWasClicked` method is invoked
 1. Use the `querySelector()` method to search the `document` for the element with the selector `#save`, then store a reference to that element as a variable names `save`
    - Listen to the `save` element for a `click` by invoking the `addEventListener()` method at the bottom of the script. When clicked, ensure the `saveScore` method is invoked
