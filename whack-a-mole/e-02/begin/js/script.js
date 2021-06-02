@@ -53,14 +53,17 @@ let calculateScore = (time, missed) => {
 	return Number((10000 - (time * 50) - (missed * 200)).toFixed(1))
 }
 
-let saveScore = () => {
-	gamesummary.classList.add(`hide`)
-	leaderboard.classList.remove(`hide`)
-
-	let totalScore = calculateScore(timeElapsed, missCount)
-	let userName = yourname.value.trim()
-
+let addNewRecord = (userName, timeElapsed, missCount) => {
+   let totalScore = calculateScore(timeElapsed, missCount)
    console.log(`${userName} scored ${totalScore}, missing ${missCount} in ${timeElapsed} seconds`)
+}
+
+let saveScore = () => {
+   gamesummary.classList.add(`hide`)
+   leaderboard.classList.remove(`hide`)
+
+   let userName = yourname.value.trim()
+   addNewRecord(userName, timeElapsed, missCount)
 }
 
 let buildTable = () => {

@@ -28,9 +28,9 @@ let startGame = () => {
 	missCount = 0
 	writeToMissed(missCount)
 
-   modal.classList.add(`hide`)
+	modal.classList.add(`hide`)
 
-   console.log(`Go!`)
+	console.log(`Go!`)
 }
 
 let tickTock = () => {
@@ -39,28 +39,32 @@ let tickTock = () => {
 }
 
 let toggleMoles = () => {
-   let whichMole = Math.random() * 7
+	let whichMole = Math.random() * 7
 
-   console.log(`Mole #${whichMole}`)
+	console.log(`Mole #${whichMole}`)
 }
 
 let grassWasClicked = () => {
-   console.log(`Click!`)
+	console.log(`Click!`)
 }
 
 let calculateScore = (time, missed) => {
 	return 10000 - (time * 50) - (missed * 200)
 }
 
+let addNewRecord = (userName, timeElapsed, missCount) => {
+	let totalScore = calculateScore(timeElapsed, missCount)
+	console.log(`${userName} scored ${totalScore}, missing ${missCount} in ${timeElapsed} seconds`)
+}
+
 let saveScore = () => {
 	gamesummary.classList.add(`hide`)
 	leaderboard.classList.remove(`hide`)
 
-	let totalScore = calculateScore(timeElapsed, missCount)
 	let userName = yourname.value
-
-   console.log(`${userName} scored ${totalScore}, missing ${missCount} in ${timeElapsed} seconds`)
+	addNewRecord(userName, timeElapsed, missCount)
 }
+
 
 grass.addEventListener(`click`, grassWasClicked)
 save.addEventListener(`click`, saveScore)

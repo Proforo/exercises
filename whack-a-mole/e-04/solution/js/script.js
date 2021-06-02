@@ -54,10 +54,10 @@ let startGame = () => {
 		whack.classList.remove(`whacked`)
 	})
 
-   moleTimer = setInterval(toggleMoles, frequency) // mole
+	moleTimer = setInterval(toggleMoles, frequency) // mole
 	clockTimer = setInterval(tickTock, 100) // clock
 
-   modal.classList.add(`hide`)
+	modal.classList.add(`hide`)
 }
 
 let tickTock = () => {
@@ -90,18 +90,21 @@ let calculateScore = (time, missed) => {
 	return Number((10000 - (time * 50) - (missed * 200)).toFixed(1))
 }
 
+let addNewRecord = (userName, timeElapsed, missCount) => {
+	let totalScore = calculateScore(timeElapsed, missCount)
+	console.log(`${userName} scored ${totalScore}, missing ${missCount} in ${timeElapsed} seconds`)
+
+	leaders.push({name: userName, secs: Number(timeElapsed.toFixed(1)), miss: missCount, score: totalScore})
+
+	buildTable(leaders)
+}
+
 let saveScore = () => {
 	gamesummary.classList.add(`hide`)
 	leaderboard.classList.remove(`hide`)
 
-	let totalScore = calculateScore(timeElapsed, missCount)
 	let userName = yourname.value.trim()
-
-	leaders.push({name: userName, secs: Number(timeElapsed.toFixed(1)), miss: missCount, score: totalScore})
-
-   console.log(`${userName} scored ${totalScore}, missing ${missCount} in ${timeElapsed} seconds`)
-
-   buildTable(leaders)
+	addNewRecord(userName, timeElapsed, missCount)
 }
 
 let buildTable = (data) => {
@@ -117,12 +120,12 @@ let buildTable = (data) => {
 		tr.insertCell().textContent = leader.score.toFixed(1)
 	})
 
-   leaderboard.classList.remove(`hide`)
+	leaderboard.classList.remove(`hide`)
 }
 
 let itsGameOver = () => {
 
-   clearInterval(moleTimer)
+	clearInterval(moleTimer)
 	clearInterval(clockTimer)
 
 	summaryMissed.textContent = missCount

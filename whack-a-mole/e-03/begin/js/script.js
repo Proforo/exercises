@@ -51,7 +51,7 @@ let startGame = () => {
 		whack.classList.remove(`whacked`)
 	})
 
-   modal.classList.add(`hide`)
+	modal.classList.add(`hide`)
 }
 
 let tickTock = () => {
@@ -60,30 +60,35 @@ let tickTock = () => {
 }
 
 let toggleMoles = () => {
-   let holes = document.querySelectorAll(`.hole:not(.whacked)`)
+	let holes = document.querySelectorAll(`.hole:not(.whacked)`)
 	let whichMole = Math.floor(Math.random() * (holes.length * interval)) 
 
-   holes[whichMole].classList.toggle(`mole`)
+	holes[whichMole].classList.toggle(`mole`)
 }
 
 let grassWasClicked = () => {
-   console.log(`Click!`)
+	console.log(`Click!`)
 }
 
 let calculateScore = (time, missed) => {
 	return Number((10000 - (time * 50) - (missed * 200)).toFixed(1))
 }
 
+let addNewRecord = (userName, timeElapsed, missCount) => {
+	let totalScore = calculateScore(timeElapsed, missCount)
+	console.log(`${userName} scored ${totalScore}, missing ${missCount} in ${timeElapsed} seconds`)
+
+	leaders.push({name: userName, secs: Number(timeElapsed.toFixed(1)), miss: missCount, score: totalScore})
+
+	buildTable(leaders)
+}
+
 let saveScore = () => {
 	gamesummary.classList.add(`hide`)
 	leaderboard.classList.remove(`hide`)
 
-	let totalScore = calculateScore(timeElapsed, missCount)
 	let userName = yourname.value.trim()
-
-   console.log(`${userName} scored ${totalScore}, missing ${missCount} in ${timeElapsed} seconds`)
-
-   buildTable(leaders)
+	addNewRecord(userName, timeElapsed, missCount)
 }
 
 let buildTable = (data) => {
@@ -99,7 +104,7 @@ let buildTable = (data) => {
 		tr.insertCell().textContent = leader.score.toFixed(1)
 	})
 
-   leaderboard.classList.remove(`hide`)
+	leaderboard.classList.remove(`hide`)
 }
 
 let itsGameOver = () => {

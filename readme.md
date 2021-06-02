@@ -45,7 +45,7 @@
 |  E-04  | Event Delegation                   |[✅](whack-a-mole/e-04/readme.md)| | | |
 |  E-05  | Javascript Object Notation (JSON)  |[✅](whack-a-mole/e-05/readme.md)| | | |
 |  E-06  | Asynchronous Data Fetching         |[✅](whack-a-mole/e-06/readme.md)| | | |
-|  E-07  | Module Import                      | | | |🟪|
+|  E-07  | Module Import                      |[✅](whack-a-mole/e-07/readme.md)| | | |
 
 ### Legend
 
