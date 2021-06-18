@@ -10,8 +10,8 @@ This page will use two font stacks throughout the entire document:
 - Sans-serif set: `Helvetica, Arial, sans-serif`
 - Serif set: `Georgia, 'Times New Roman', Times, serif`
 
-1. Apply the "Sans-serif" font set to be the `font-family` value within the `body` rule. This will apply it to all inheriting elements by default
-2. Apply the "Serif" font set to the `font-family` property of the following elements, creating a new rules with the given selector if one doesn't already exist:
+1. Apply the "Sans-serif" set to `font-family` of the `body` rule, so that it's applied to all inheriting elements by default
+2. Create new CSS rules for the anchor, primary slogan, the business name, and the category name. Add the classes below into the HTML. Apply the "Serif" set to the `font-family` of these elements:
    - `a`
    - `.primary-slogan`
    - `.business-name`
